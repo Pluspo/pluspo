@@ -1,6 +1,15 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.after_initialize do
+    Bullet.enable        = true # Bulletのgemを利用可能にします。でも、何もしません。
+    Bullet.alert         = true # ブラウザにJSのアラートを出します。
+    Bullet.bullet_logger = true # bulletのログファイルを出します(場所：Rails.root/log/bullet.log)
+    Bullet.console       = true # console.logに警告を出します。
+    Bullet.rails_logger  = true # railsのログに警告を出します。
+    Bullet.add_footer    = true # 画面左下にメッセージを出します。
+  end
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
