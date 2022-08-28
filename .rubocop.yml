@@ -1,0 +1,99 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 3.1.0
+  TargetRailsVersion: 6.1.4.4
+  Exclude:
+    - node_modules/**/*
+    - vendor/**/*
+    - bin/*
+    - db/migrate/*
+    - db/schema.rb
+
+Metrics/AbcSize:
+  Max: 65
+
+Metrics/ClassLength:
+  Max: 160
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Layout/LineLength:
+  Max: 200
+
+Metrics/MethodLength:
+  Max: 50
+
+Metrics/PerceivedComplexity:
+  Max: 11
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+# Use only ascii symbols in comments.
+Style/AsciiComments:
+  Enabled: false
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - staging
+    - development
+    - test
+
+Style/SymbolArray:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
