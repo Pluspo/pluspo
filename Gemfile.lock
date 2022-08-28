@@ -223,6 +223,10 @@ GEM
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     strscan (3.0.4)
+    tailwindcss-rails (2.0.12-arm64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.12-x86_64-darwin)
+      railties (>= 6.0.0)
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.11)
@@ -269,6 +273,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  tailwindcss-rails
   turbo-rails
   tzinfo-data
   web-console
