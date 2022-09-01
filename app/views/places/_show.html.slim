@@ -1,1 +1,61 @@
-施設の詳細情報
+.place-show style="background-color: aliceblue;"
+  .row
+    .col-12.mb-2
+      = image_tag  "taito_riverside_sports_center.png", { class: 'img-thumbnail', width: '100%' }
+    .col-12
+      .row.place-info
+        #list-example.list-group.col-3.ms-4
+          a.list-group-item.list-group-item-action href="#scrollspyHeading1"  施設名称
+          a.list-group-item.list-group-item-action href="#scrollspyHeading2"  所在地
+          a.list-group-item.list-group-item-action href="#scrollspyHeading3"  スポーツ
+          a.list-group-item.list-group-item-action href="#scrollspyHeading4"  開館時間
+          a.list-group-item.list-group-item-action href="#scrollspyHeading5"  問合せ
+          a.list-group-item.list-group-item-action href="#scrollspyHeading6"  その他
+
+        / FIX: 高さ指定をレスポンシブにしたい...BootStrapナニモワカラナイ
+        .scrollspy-example.col-8 data-bs-offset="0" data-bs-spy="scroll" data-bs-target="#list-example" tabindex="0" style="height: 300px; overflow-y: scroll;"
+          h4#scrollspyHeading1 施設名称
+          p 台東リバーサイドスポーツセンター
+          h4#scrollspyHeading2 所在地
+          p 〒111-0024 東京都台東区今戸1-1-10
+          h4#scrollspyHeading3 スポーツ
+          p.sports-icons
+            - sports = %w[basketball-ball volleyball-ball baseball-bat-ball futbol swimmer table-tennis]
+            - sports.each do |sport|
+              span.border.border-dark.rounded.mx-1.p-1
+                / TODO: font-awesomeの無料枠だとアイコン少ない...代案必要
+                i.fa-lg.fa-solid class="fa-#{sport}"
+          h4#scrollspyHeading4 開館時間
+          p 午前9時から午後10時まで（午後9時最終入館）
+          p 月曜日の開館日は午後6時まで(午後5時最終入館)
+          p
+            b 休館日
+            | ：毎週月曜日(第1月曜日及び祝日の月曜日を除く)
+          h4#scrollspyHeading5 問合せ
+          p 台東リバーサイドスポーツセンター 管理事務所
+          p 電話   03-3872-3181
+          p FAX   03-3872-3184
+          h4#scrollspyHeading6 その他
+          p = link_to '施設HP', 'https://www.taitocity.net/zaidan/riverside/', target: :_blank
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
+          p テストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト
