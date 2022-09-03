@@ -1,16 +1,15 @@
-nav.navbar.navbar-expand-lg.navbar-light.bg-light.bg-dark.p-3
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.bg-dark.p-3 style="height: 65px;"
   .container-fluid
     .me-5
-      img.img-thumbnail.p-0.border-0 alt="..." style="width: 200px" src="https://i.gyazo.com/6d402bace1ef72a00e6f3af0162e7f4c.png" /
+      img.img-thumbnail.p-0.border-0 alt="..." style="width: 150px" src="https://i.gyazo.com/6d402bace1ef72a00e6f3af0162e7f4c.png" /
     button.navbar-toggler aria-controls="navbarSupportedContent" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" 
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       form.d-flex
-        input.form-control.me-0 aria-label="Search" placeholder="スポーツ" type="search" /
-        button.btn.btn-danger.me-3 type="submit"  Search
+        input.form-control.me-0.ms-5 aria-label="Search" placeholder="スポーツ" type="search" /
       form.d-flex
         input.form-control.me-0 aria-label="Search" placeholder="日時" type="search" /
-        button.btn.btn-danger.me-3 type="submit"  Search
       form.d-flex
         input.form-control.me-0 aria-label="Search" placeholder="場所" type="search" /
-        button.btn.btn-danger.me-3 type="submit"  Search
+        / TODO: 検索機能をajaxで実装したらSearchボタンは消す
+        button.btn.btn-danger.me-3.ms-1 type="submit"  Search
