@@ -11,6 +11,15 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_09_05_060535) do
+  create_table "area_sports", force: :cascade do |t|
+    t.integer "area_id", null: false
+    t.integer "sport_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_area_sports_on_area_id"
+    t.index ["sport_id"], name: "index_area_sports_on_sport_id"
+  end
+
   create_table "areas", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "opened_at"
@@ -20,15 +29,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_060535) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_areas_on_place_id"
-  end
-
-  create_table "areas_sports", force: :cascade do |t|
-    t.integer "area_id", null: false
-    t.integer "sport_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["area_id"], name: "index_areas_sports_on_area_id"
-    t.index ["sport_id"], name: "index_areas_sports_on_sport_id"
   end
 
   create_table "places", force: :cascade do |t|
@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_060535) do
     t.index ["name"], name: "index_sports_on_name", unique: true
   end
 
+  add_foreign_key "area_sports", "areas"
+  add_foreign_key "area_sports", "sports"
   add_foreign_key "areas", "places"
-  add_foreign_key "areas_sports", "areas"
-  add_foreign_key "areas_sports", "sports"
 end
