@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_05_035232) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_05_055621) do
+  create_table "areas", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "opened_at"
+    t.datetime "closed_at"
+    t.string "address"
+    t.integer "place_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_areas_on_place_id"
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "opened_at"
@@ -28,4 +39,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_035232) do
     t.index ["name"], name: "index_sports_on_name", unique: true
   end
 
+  add_foreign_key "areas", "places"
 end
