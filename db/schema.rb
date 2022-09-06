@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_05_062721) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_06_023145) do
   create_table "area_sports", force: :cascade do |t|
     t.integer "area_id", null: false
     t.integer "sport_id", null: false
@@ -22,20 +22,28 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_062721) do
 
   create_table "areas", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "opened_at"
-    t.datetime "closed_at"
-    t.string "address"
+    t.datetime "opened_at", null: false
+    t.datetime "closed_at", null: false
+    t.string "address", null: false
     t.integer "place_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_areas_on_place_id"
   end
 
+  create_table "batches", force: :cascade do |t|
+    t.datetime "date_time", null: false
+    t.integer "area_sport_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_sport_id"], name: "index_batches_on_area_sport_id"
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "opened_at"
-    t.datetime "closed_at"
-    t.string "address"
+    t.datetime "opened_at", null: false
+    t.datetime "closed_at", null: false
+    t.string "address", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_places_on_name", unique: true
@@ -43,8 +51,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_062721) do
 
   create_table "sport_shedules", force: :cascade do |t|
     t.string "cycles"
-    t.datetime "started_at"
-    t.datetime "finished_at"
+    t.datetime "started_at", null: false
+    t.datetime "finished_at", null: false
     t.integer "area_sport_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -61,5 +69,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_062721) do
   add_foreign_key "area_sports", "areas"
   add_foreign_key "area_sports", "sports"
   add_foreign_key "areas", "places"
+  add_foreign_key "batches", "area_sports"
   add_foreign_key "sport_shedules", "area_sports"
 end
