@@ -1,6 +1,6 @@
 class Area < ApplicationRecord
   belongs_to :place
-  has_many :area_sports
+  has_many :area_sports, dependent: :destroy
   has_many :sports, throught: :area_sports
   with_options presence: true do
     validates :name
