@@ -1,6 +1,8 @@
 class SportShedule < ApplicationRecord
   belongs_to :area_sport
-  validates :cycles, presence: true
-  validates :opened_at, presence: true
-  validates :closed_at, presence: true
+  with_options presence: true do
+    validates :cycles
+    validates :opened_at
+    validates :closed_at
+  end
 end
