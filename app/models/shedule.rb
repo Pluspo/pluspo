@@ -1,4 +1,4 @@
-class SportShedule < ApplicationRecord
+class Shedule < ApplicationRecord
   belongs_to :area_sport
   with_options presence: true do
     validates :cycles
