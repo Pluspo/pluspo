@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_07_063630) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_064527) do
   create_table "area_sports", force: :cascade do |t|
     t.integer "area_id", null: false
     t.integer "sport_id", null: false
@@ -62,6 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_063630) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_sport_id"], name: "index_shedules_on_area_sport_id"
+    t.index ["started_at", "finished_at"], name: "index_shedules_on_started_at_and_finished_at"
   end
 
   create_table "sports", force: :cascade do |t|
