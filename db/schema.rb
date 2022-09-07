@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_07_021929) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_063630) do
   create_table "area_sports", force: :cascade do |t|
     t.integer "area_id", null: false
     t.integer "sport_id", null: false
@@ -51,6 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_021929) do
     t.string "city", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["city"], name: "index_places_on_city"
     t.index ["name"], name: "index_places_on_name", unique: true
   end
 
