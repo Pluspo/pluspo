@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_07_010856) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_011855) do
   create_table "area_sports", force: :cascade do |t|
     t.integer "area_id", null: false
     t.integer "sport_id", null: false
@@ -53,7 +53,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_010856) do
   end
 
   create_table "shedules", force: :cascade do |t|
-    t.string "cycles"
     t.datetime "started_at", null: false
     t.datetime "finished_at", null: false
     t.integer "area_sport_id", null: false
