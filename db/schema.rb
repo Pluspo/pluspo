@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_07_011855) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_021929) do
   create_table "area_sports", force: :cascade do |t|
     t.integer "area_id", null: false
     t.integer "sport_id", null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_011855) do
     t.datetime "updated_at", null: false
     t.datetime "started_at", null: false
     t.datetime "finished_at", null: false
+    t.integer "cycle", default: 0, null: false
     t.index ["area_sport_id"], name: "index_batches_on_area_sport_id"
   end
 
