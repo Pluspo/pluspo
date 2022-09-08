@@ -10,4 +10,5 @@ class Area < ApplicationRecord
     validates :closed_at
     validates :note
   end
+  enum status: { both: 0, outdoors: 1, indoor: 2 }
 end
