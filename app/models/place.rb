@@ -1,11 +1,9 @@
 class Place < ApplicationRecord
   has_many :areas, dependent: :destroy
+  validates :name, presence: true, uniqueness: true
   with_options presence: true do
     validates :opened_at
     validates :closed_at
     validates :address
-    with_options uniqueness: true do
-      validates :name
-    end
   end
 end
