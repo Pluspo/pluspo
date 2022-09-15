@@ -4,5 +4,6 @@ const config = {
     altInput: true,
     altFormat: "m/d    H:i",  // 実際に画面に表示されるフォーマット
     dateFormat: "Y-m-d H:i",  // valueの中身のフォーマット
+    locale: 'ja'
 }
 flatpickr('#calendar', config);
