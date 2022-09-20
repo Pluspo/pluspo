@@ -1,14 +1,13 @@
 class Area < ApplicationRecord
   belongs_to :place
-  with_options dependent: :destroy do
-    has_many :area_sports
-    has_many :sports, through: :area_sports
-  end
+  has_many :area_sports, dependent: :destroy
+  has_many :sports, through: :area_sports
+
   with_options presence: true do
     validates :name
     validates :opened_at
     validates :closed_at
-    validates :note
+    validates :location
   end
 
   enum location: { both: 0, outdoors: 1, indoors: 2 }
