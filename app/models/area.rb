@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: areas
+#
+#  id         :integer          not null, primary key
+#  closed_at  :datetime         not null
+#  location   :integer          default("both"), not null
+#  name       :string           not null
+#  note       :string
+#  opened_at  :datetime         not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  place_id   :integer          not null
+#
+# Indexes
+#
+#  index_areas_on_place_id  (place_id)
+#
+# Foreign Keys
+#
+#  place_id  (place_id => places.id)
+#
 class Area < ApplicationRecord
   belongs_to :place
   has_many :area_sports, dependent: :destroy
