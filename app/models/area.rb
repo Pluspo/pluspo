@@ -21,6 +21,8 @@
 #  place_id  (place_id => places.id)
 #
 class Area < ApplicationRecord
+  enum location: { both: 0, outdoors: 1, indoors: 2 }
+
   belongs_to :place
   has_many :area_sports, dependent: :destroy
   has_many :sports, through: :area_sports
@@ -31,6 +33,4 @@ class Area < ApplicationRecord
     validates :closed_at
     validates :location
   end
-
-  enum location: { both: 0, outdoors: 1, indoors: 2 }
 end
