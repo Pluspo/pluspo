@@ -3,6 +3,7 @@ class Sport < ApplicationRecord
     has_many :area_sports
     has_many :areas, through: :area_sports
   end
-  has_many :shedules, dependent: :destroy
+  has_many :schedules, dependent: :destroy
+
   validates :name, presence: true, uniqueness: true
 end

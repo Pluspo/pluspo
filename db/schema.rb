@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_908_020_554) do
+ActiveRecord::Schema[7.0].define(version: 20_220_920_023_808) do
   create_table "area_sports", force: :cascade do |t|
     t.integer "area_id", null: false
     t.integer "sport_id", null: false
@@ -56,14 +56,14 @@ ActiveRecord::Schema[7.0].define(version: 20_220_908_020_554) do
     t.index ["name"], name: "index_places_on_name", unique: true
   end
 
-  create_table "shedules", force: :cascade do |t|
+  create_table "schedules", force: :cascade do |t|
     t.datetime "started_at", null: false
     t.datetime "finished_at", null: false
     t.integer "area_sport_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["area_sport_id"], name: "index_shedules_on_area_sport_id"
-    t.index %w[started_at finished_at], name: "index_shedules_on_started_at_and_finished_at"
+    t.index ["area_sport_id"], name: "index_schedules_on_area_sport_id"
+    t.index %w[started_at finished_at], name: "index_schedules_on_started_at_and_finished_at"
   end
 
   create_table "sports", force: :cascade do |t|
@@ -77,5 +77,5 @@ ActiveRecord::Schema[7.0].define(version: 20_220_908_020_554) do
   add_foreign_key "area_sports", "sports"
   add_foreign_key "areas", "places"
   add_foreign_key "batches", "area_sports"
-  add_foreign_key "shedules", "area_sports"
+  add_foreign_key "schedules", "area_sports"
 end
