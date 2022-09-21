@@ -4,8 +4,8 @@
 #
 #  id            :integer          not null, primary key
 #  cycle         :integer          default("unknown"), not null
-#  finished_at   :datetime         not null
-#  started_at    :datetime         not null
+#  finished_at   :string           not null
+#  started_at    :string           not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  area_sport_id :integer          not null
