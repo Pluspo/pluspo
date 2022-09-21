@@ -3,8 +3,7 @@
 # Table name: batches
 #
 #  id            :integer          not null, primary key
-#  cycle         :integer          default("wednesday"), not null
-#  date_time     :datetime         not null
+#  cycle         :integer          default("unknown"), not null
 #  finished_at   :datetime         not null
 #  started_at    :datetime         not null
 #  created_at    :datetime         not null
