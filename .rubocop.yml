@@ -26,6 +26,8 @@ Metrics/CyclomaticComplexity:
 
 Layout/LineLength:
   Max: 200
+  Exclude:
+    - db/fixtures/*
 
 Metrics/MethodLength:
   Max: 50
