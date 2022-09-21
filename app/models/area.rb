@@ -3,11 +3,9 @@
 # Table name: areas
 #
 #  id         :integer          not null, primary key
-#  closed_at  :datetime         not null
 #  location   :integer          default("both"), not null
 #  name       :string           not null
 #  note       :string
-#  opened_at  :datetime         not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  place_id   :integer          not null

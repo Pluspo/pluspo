@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_20_051959) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_21_064056) do
   create_table "area_sports", force: :cascade do |t|
     t.integer "area_id", null: false
     t.integer "sport_id", null: false
@@ -22,8 +22,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_20_051959) do
 
   create_table "areas", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "opened_at", null: false
-    t.datetime "closed_at", null: false
     t.string "note"
     t.integer "place_id", null: false
     t.datetime "created_at", null: false
