@@ -27,7 +27,7 @@
 　　- 施設登録
 
 # ER図
-[![Image from Gyazo](https://i.gyazo.com/44d03b73812c941a7752b9c7208db297.png)](https://gyazo.com/44d03b73812c941a7752b9c7208db297)
+[![Image from Gyazo](https://i.gyazo.com/eddc1242249969aaee870c8a820a2cbb.jpg)](https://gyazo.com/eddc1242249969aaee870c8a820a2cbb)
 
 # 今後追加予定の機能
 - 施設予約機能
