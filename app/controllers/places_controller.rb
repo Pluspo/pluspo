@@ -1,3 +1,6 @@
 class PlacesController < ApplicationController
-  def index; end
+  def index
+    # FIX: N+1対策する
+    @schedules = Schedule.all.decorate
+  end
 end
