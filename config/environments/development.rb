@@ -3,7 +3,7 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   config.after_initialize do
     Bullet.enable        = true # Bulletのgemを利用可能にします。でも、何もしません。
-    Bullet.alert         = true # ブラウザにJSのアラートを出します。
+    Bullet.alert         = false # ブラウザにJSのアラートを出します。
     Bullet.bullet_logger = true # bulletのログファイルを出します(場所：Rails.root/log/bullet.log)
     Bullet.console       = true # console.logに警告を出します。
     Bullet.rails_logger  = true # railsのログに警告を出します。
