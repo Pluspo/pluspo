@@ -5,7 +5,7 @@
 #  id         :integer          not null, primary key
 #  location   :integer          default("both"), not null
 #  name       :string           not null
-#  note       :string
+#  note       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  place_id   :integer          not null
