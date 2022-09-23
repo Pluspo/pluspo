@@ -14,6 +14,7 @@ AllCops:
     - bin/*
     - db/migrate/*
     - db/schema.rb
+    - lib/tasks/auto_annotate_models.rake
 
 Metrics/AbcSize:
   Max: 65
