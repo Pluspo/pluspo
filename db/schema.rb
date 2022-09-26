@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_08_020554) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_23_023328) do
   create_table "area_sports", force: :cascade do |t|
     t.integer "area_id", null: false
     t.integer "sport_id", null: false
@@ -22,23 +22,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_020554) do
 
   create_table "areas", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "opened_at", null: false
-    t.datetime "closed_at", null: false
-    t.string "note"
+    t.text "note"
     t.integer "place_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "status", default: 0, null: false
+    t.integer "location", default: 0, null: false
     t.index ["place_id"], name: "index_areas_on_place_id"
   end
 
   create_table "batches", force: :cascade do |t|
-    t.datetime "date_time", null: false
     t.integer "area_sport_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "started_at", null: false
-    t.datetime "finished_at", null: false
+    t.string "started_at", null: false
+    t.string "finished_at", null: false
     t.integer "cycle", default: 0, null: false
     t.index ["area_sport_id"], name: "index_batches_on_area_sport_id"
   end
@@ -56,14 +53,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_020554) do
     t.index ["name"], name: "index_places_on_name", unique: true
   end
 
-  create_table "shedules", force: :cascade do |t|
+  create_table "schedules", force: :cascade do |t|
     t.datetime "started_at", null: false
     t.datetime "finished_at", null: false
     t.integer "area_sport_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["area_sport_id"], name: "index_shedules_on_area_sport_id"
-    t.index ["started_at", "finished_at"], name: "index_shedules_on_started_at_and_finished_at"
+    t.index ["area_sport_id"], name: "index_schedules_on_area_sport_id"
+    t.index ["finished_at"], name: "index_schedules_on_finished_at"
+    t.index ["started_at"], name: "index_schedules_on_started_at"
   end
 
   create_table "sports", force: :cascade do |t|
@@ -77,5 +75,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_08_020554) do
   add_foreign_key "area_sports", "sports"
   add_foreign_key "areas", "places"
   add_foreign_key "batches", "area_sports"
-  add_foreign_key "shedules", "area_sports"
+  add_foreign_key "schedules", "area_sports"
 end

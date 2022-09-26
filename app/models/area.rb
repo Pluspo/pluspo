@@ -1,14 +1,34 @@
+# == Schema Information
+#
+# Table name: areas
+#
+#  id         :integer          not null, primary key
+#  location   :integer          default("both"), not null
+#  name       :string           not null
+#  note       :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  place_id   :integer          not null
+#
+# Indexes
+#
+#  index_areas_on_place_id  (place_id)
+#
+# Foreign Keys
+#
+#  place_id  (place_id => places.id)
+#
 class Area < ApplicationRecord
+  enum location: { both: 0, outdoors: 1, indoors: 2 }
+
   belongs_to :place
-  with_options dependent: :destroy do
-    has_many :area_sports
-    has_many :sports, through: :area_sports
-  end
+  has_many :area_sports, dependent: :destroy
+  has_many :sports, through: :area_sports
+
   with_options presence: true do
     validates :name
     validates :opened_at
     validates :closed_at
-    validates :note
+    validates :location
   end
-  enum status: { both: 0, outdoors: 1, indoor: 2 }
 end

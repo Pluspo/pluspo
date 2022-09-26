@@ -3,124 +3,18 @@
     thead
       tr.text-center
         .mt-4
+          / TODO: モデル名を日本語翻訳して表示する
           th scope="col"  日付
           th scope="col"  時刻
           th scope="col"  スポーツ
           th scope="col"  エリア
           th.text-start.ps-4 scope="col"  場所
     tbody
-      / TODO: エリアで「大田区」とするなら、施設の名前「大田区平和公園テニスコート」は「平和公園テニスコート」で良さそう？
-      tr
-        th scope="row" 8/11(木)
-        td 17:00~18:00
-        td テニス
-        td 大田区
-        td 大田区平和公園テニスコート
-      tr
-        th scope="row"  8/12(金)
-        td 17:00~18:00
-        td ゴルフ
-        td 文京区
-        td 東京ドーム
-      tr
-        th scope="row"  8/13(土)
-        td 17:00~18:00
-        td ラグビー
-        td 千代田区
-        td 千代田区うなぎ公園
-      tr
-        th scope="row"  8/14(日)
-        td 17:00~18:00
-        td バスケ
-        td 足立区
-        td 足立区宮存公園
-      tr
-        th scope="row"  8/15(月)
-        td 17:00~18:00
-        td 野球
-        td 台東区
-        td 台東区リバーサイドスポーツセンター
-      tr
-        th scope="row"  8/16(火)
-        td 17:00~18:00
-        td 弓道
-        td 港区
-        td 港区シーサイドスポーツセンター
-      tr
-        th scope="row"  8/17(水)
-        td 17:00~18:00
-        td 合気道
-        td 荒川区
-        td 荒川区ピラミッド道場
-      tr
-        th scope="row"  8/18(木)
-        td 17:00~18:00
-        td 柔道
-        td 板橋区
-        td 板橋区板前スポーツセンター
-      tr
-        th scope="row"  8/19(金)
-        td 17:00~18:00
-        td 卓球
-        td 葛飾区
-        td 葛飾区両津スポーツセンター
-      tr
-        th scope="row"  8/20(土)
-        td 17:00~18:00
-        td サッカー
-        td 江東区
-        td 江東区マウンテンサイドスポーツセンター
-      tr
-        th scope="row"  8/21(日)
-        td 17:00~18:00
-        td ゴルフ
-        td 品川区
-        td 品川区わっしょいセンター
-      tr
-        th scope="row"  8/22(月)
-        td 17:00~18:00
-        td テニス
-        td 北区
-        td 北区ノース公園テニスコート
-      tr
-        th scope="row"  8/23(火)
-        td 17:00~18:00
-        td 相撲
-        td 新宿区
-        td 新宿区スペシャルアリーナ
-      tr
-        th scope="row"  8/24(水)
-        td 17:00~18:00
-        td スキー
-        td 墨田区
-        td 墨田区墨汁公園
-      tr
-        th scope="row"  8/25(木)
-        td 17:00~18:00
-        td ラクロス
-        td 豊島区
-        td 豊島区豊島園
-      tr
-        th scope="row"  8/26(金)
-        td 17:00~18:00
-        td ムエタイ
-        td 北区
-        td 北区エンジョイパーク
-      tr
-        th scope="row"  8/27(土)
-        td 17:00~18:00
-        td 野球
-        td 新宿区
-        td 新宿区PayPayドーム
-      tr
-        th scope="row"  8/28(日)
-        td 17:00~18:00
-        td 空手
-        td 墨田区
-        td 墨田区スポーツセンター
-      tr
-        th scope="row"  8/29(月)
-        td 17:00~18:00
-        td 体操
-        td 豊島区
-        td 豊島区マンションサイドセンター
+      / FIX: N+1対策する
+      - @schedules.each do |schedule|
+        tr
+          th = schedule.date_and_day_of_week
+          td = schedule.full_time
+          td = schedule.area_sport.sport.name
+          td = schedule.area_sport.area.place.city
+          td = schedule.area_sport.area.place.name
