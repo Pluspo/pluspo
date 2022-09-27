@@ -21,7 +21,7 @@ places_params = [
         id: 1,
         name: '5階:弓道場',
         location: :indoors,
-        note: "運動できる服装、室内用の靴が必要です。\n用具等は各自でご持参ください。貸出はありません。\nアーチェリー：中学生以上のご利用で、中学生の方は指導員の許可が必要です。\n弓道：上記の時間から貸切、アーチェリー開放時を除きます。第2、4土曜日午前は小・中学生開放です。",
+        note: "運動できる服装、室内用の靴が必要です。\n用具等は各自でご持参ください。貸出はありません。\nアーチェリー:中学生以上のご利用で、中学生の方は指導員の許可が必要です。\n弓道:上記の時間から貸切、アーチェリー開放時を除きます。第2、4土曜日午前は小・中学生開放です。",
         sports: [
           {
             name: 'アーチェリー',
@@ -463,9 +463,124 @@ places_params = [
     address: '浅草橋5丁目1番8号',
     opened_at: '17:00',
     closed_at: '21:00',
-    message: "営業時間\n利用（テニスコート）\n　平日：17時から21時\n　土日祝：9時から21時\n利用（体育館）\n　平日：18時から21時\n　土日祝：9時から21時\n受付（通常）\n　平日：17時から21時\n　土日祝：9時から21時\n受付（プールオープン期間：6月から9月末）\n 平日：13時から21時\n 土日祝：9時から21時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日から1月3日）\nhttps://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html",
+    message: "営業時間\n利用（テニスコート）\n 平日:17時から21時\n 土日祝:9時から21時\n利用（体育館）\n 平日:18時から21時\n 土日祝:9時から21時\n受付（通常）\n 平日:17時から21時\n 土日祝:9時から21時\n受付（プールオープン期間:6月から9月末）\n 平日:13時から21時\n 土日祝:9時から21時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日から1月3日）\nhttps://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html",
     areas: [
-      # TODO: データ入れる
+      {
+        id: 1,
+        name: '4階:プール',
+        location: :indoors,
+        note: "水着・水泳帽を持参して下さい。(当施設での販売はしておりません)\n延長利用の場合は利用料を清算してください。\n利用対象者(区内在住、在勤及び在学者)\n区内在住・在勤の高齢者・障害者の方は、登録が必要です。運転免許証や各種手帳をお持ちになり、プール営業期間の開館時間に現地受付にてご登録ください。\n温度の事情により開場が見合わせ又は中止になる場合もございます。",
+        sports: [
+          {
+            name: '水泳',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '13:00',
+                closed_at: '21:00',
+              },
+              {
+                cycle: :every_saturday,
+                started_at: '9:00',
+                closed_at: '21:00'
+              },
+              {
+                cycle: :every_sunday,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: '1・2階:体育館',
+        location: :indoors,
+        note: "バスケットボールやバレーボールなど各種スポーツでご利用できます。\n準備や後片付けは利用される方にお願いしております。各種用具も用意しています。\n館内での飲食はご遠慮ください。",
+        sports: [
+          {
+            name: 'バスケットボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '18:00',
+                closed_at: '21:00'
+              },
+              {
+                cycle: :every_saturday,
+                started_at: '9:00',
+                closed_at: '21:00'
+              },
+              {
+                cycle: :every_sunday,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バレーボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '18:00',
+                closed_at: '21:00'
+              },
+              {
+                cycle: :every_saturday,
+                started_at: '9:00',
+                closed_at: '21:00'
+              },
+              {
+                cycle: :every_sunday,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3,
+        name: 'テニスコート',
+        location: :outdoors,
+        note: "利用の際は、使用承認書を受付に提示し利用してください。\n原則体育用具の準備・後片付けは利用者自身にてお願いします（体育用具を準備・後片付けするための使用時間は、使用時間外であっても認めます）。\n各種用具も用意しています\n雨天の利用可能の確認は柳北スポーツプラザにお問合せください。",
+        sports: [
+          {
+            name: 'テニス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '17:00',
+                closed_at: '21:00'
+              },
+              {
+                cycle: :every_saturday,
+                started_at: '9:00',
+                closed_at: '21:00'
+              },
+              {
+                cycle: :every_sunday,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 3,
+    name: 'たなかスポーツプラザ',
+    city: '台東区',
+    address: '日本堤2丁目25番4号',
+    opened_at: '9:00',
+    closed_at: '21:00',
+    message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）",
+    areas: [
+      # TODO:データ追加
     ]
   }
 ]
