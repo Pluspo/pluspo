@@ -477,7 +477,7 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '13:00',
-                closed_at: '21:00',
+                closed_at: '21:00'
               },
               {
                 cycle: :every_saturday,
@@ -580,7 +580,7 @@ places_params = [
     closed_at: '21:00',
     message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）",
     areas: [
-      # TODO:データ追加
+      # TODO: データ
     ]
   }
 ]
