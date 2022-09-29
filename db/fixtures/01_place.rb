@@ -463,7 +463,7 @@ places_params = [
     address: '浅草橋5丁目1番8号',
     opened_at: '17:00',
     closed_at: '21:00',
-    message: "営業時間\n利用（テニスコート）\n 平日:17時から21時\n 土日祝:9時から21時\n利用（体育館）\n 平日:18時から21時\n 土日祝:9時から21時\n受付（通常）\n 平日:17時から21時\n 土日祝:9時から21時\n受付（プールオープン期間:6月から9月末）\n 平日:13時から21時\n 土日祝:9時から21時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日から1月3日）\nhttps://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html",
+    message: "営業時間\n利用（テニスコート）\n平日：17時から21時\n土日祝：9時から21時\n利用（体育館）\n平日：18時から21時\n土日祝：9時から21時\n受付（通常）\n平日：17時から21時\n土日祝：9時から21時\n受付（プールオープン期間：6月から9月末）\n 平日：13時から21時\n 土日祝：9時から21時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日から1月3日）\nhttps://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html",
     areas: [
       {
         id: 1,
@@ -578,9 +578,140 @@ places_params = [
     address: '日本堤2丁目25番4号',
     opened_at: '9:00',
     closed_at: '21:00',
-    message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）",
+    message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：03-5246-5853\nファクス：03-5246-5814",
     areas: [
-      # TODO: データ追加
+      {
+        id: 1,
+        name: '3階:体育館',
+        location: :indoors,
+        note: "舞台芸術に関する練習（舞台演出のためのダンス、殺陣等）はできません。\n撮影や営利目的では使用できません。",
+        sports: [
+          {
+            name: '武道',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '球技',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: '3階:小体育室',
+        location: :indoors,
+        note: 'ダンスバーあり',
+        sports: [
+          {
+            name: 'ヨガ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3,
+        name: '1階:小体育室',
+        location: :indoors,
+        note: '1階小体育室の壁にはボルダリングのホールドが設置されており、ご使用可能です。',
+        sports: [
+          {
+            name: '武道',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '健康体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 4,
+        name: 'グラウンド',
+        location: :outdoors,
+        note: 'グラウンドは面積が狭いため大人のサッカーや野球はできません。',
+        sports: [
+          {
+            name: 'テニス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '少年サッカー',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '野球',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                closed_at: '21:00'
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 ]
