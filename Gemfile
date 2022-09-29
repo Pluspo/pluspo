@@ -50,6 +50,7 @@ gem 'html2slim'
 gem 'seed-fu'
 gem 'annotate'
 gem 'draper'
+gem 'sorcery'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
