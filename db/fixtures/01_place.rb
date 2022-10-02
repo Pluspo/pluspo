@@ -466,7 +466,7 @@ places_params = [
     message: "営業時間\n利用（テニスコート）\n平日：17時から21時\n土日祝：9時から21時\n利用（体育館）\n平日：18時から21時\n土日祝：9時から21時\n受付（通常）\n平日：17時から21時\n土日祝：9時から21時\n受付（プールオープン期間：6月から9月末）\n 平日：13時から21時\n 土日祝：9時から21時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日から1月3日）\nhttps://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html",
     areas: [
       {
-        id: 1,
+        id: 13,
         name: '4階:プール',
         location: :indoors,
         note: "水着・水泳帽を持参して下さい。(当施設での販売はしておりません)\n延長利用の場合は利用料を清算してください。\n利用対象者(区内在住、在勤及び在学者)\n区内在住・在勤の高齢者・障害者の方は、登録が必要です。運転免許証や各種手帳をお持ちになり、プール営業期間の開館時間に現地受付にてご登録ください。\n温度の事情により開場が見合わせ又は中止になる場合もございます。",
@@ -477,24 +477,24 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '13:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               },
               {
                 cycle: :every_saturday,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               },
               {
                 cycle: :every_sunday,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           }
         ]
       },
       {
-        id: 2,
+        id: 14,
         name: '1・2階:体育館',
         location: :indoors,
         note: "バスケットボールやバレーボールなど各種スポーツでご利用できます。\n準備や後片付けは利用される方にお願いしております。各種用具も用意しています。\n館内での飲食はご遠慮ください。",
@@ -505,17 +505,17 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '18:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               },
               {
                 cycle: :every_saturday,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               },
               {
                 cycle: :every_sunday,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           },
@@ -525,24 +525,24 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '18:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               },
               {
                 cycle: :every_saturday,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               },
               {
                 cycle: :every_sunday,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           }
         ]
       },
       {
-        id: 3,
+        id: 15,
         name: 'テニスコート',
         location: :outdoors,
         note: "利用の際は、使用承認書を受付に提示し利用してください。\n原則体育用具の準備・後片付けは利用者自身にてお願いします（体育用具を準備・後片付けするための使用時間は、使用時間外であっても認めます）。\n各種用具も用意しています\n雨天の利用可能の確認は柳北スポーツプラザにお問合せください。",
@@ -553,17 +553,17 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '17:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               },
               {
                 cycle: :every_saturday,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               },
               {
                 cycle: :every_sunday,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           }
@@ -581,7 +581,7 @@ places_params = [
     message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：03-5246-5853\nファクス：03-5246-5814",
     areas: [
       {
-        id: 1,
+        id: 16,
         name: '3階:体育館',
         location: :indoors,
         note: "舞台芸術に関する練習（舞台演出のためのダンス、殺陣等）はできません。\n撮影や営利目的では使用できません。",
@@ -592,7 +592,7 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           },
@@ -602,7 +602,7 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           },
@@ -612,14 +612,14 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           }
         ]
       },
       {
-        id: 2,
+        id: 17,
         name: '3階:小体育室',
         location: :indoors,
         note: 'ダンスバーあり',
@@ -630,7 +630,7 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           },
@@ -640,14 +640,14 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           }
         ]
       },
       {
-        id: 3,
+        id: 18,
         name: '1階:小体育室',
         location: :indoors,
         note: '1階小体育室の壁にはボルダリングのホールドが設置されており、ご使用可能です。',
@@ -658,7 +658,7 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           },
@@ -668,14 +668,14 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           }
         ]
       },
       {
-        id: 4,
+        id: 19,
         name: 'グラウンド',
         location: :outdoors,
         note: 'グラウンドは面積が狭いため大人のサッカーや野球はできません。',
@@ -686,7 +686,7 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           },
@@ -696,7 +696,7 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           },
@@ -706,7 +706,7 @@ places_params = [
               {
                 cycle: :every,
                 started_at: '9:00',
-                closed_at: '21:00'
+                finished_at: '21:00'
               }
             ]
           }
@@ -728,8 +728,8 @@ places_params.each do |place_params|
 
     sports_params.each do |sport_params|
       schedules_params = sport_params.delete(:schedules)
-      sport = area.sports.find_or_create_by!(sport_params)
-      area_sport = AreaSport.find_by!(area_id: area.id, sport_id: sport.id)
+      sport = Sport.find_by(name: sport_params[:name]) || Sport.create!(sport_params)
+      area_sport = AreaSport.find_or_create_by!(area_id: area.id, sport_id: sport.id)
 
       schedules_params.each do |schedule_params|
         area_sport.batches.find_or_create_by!(schedule_params)
