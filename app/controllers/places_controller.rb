@@ -14,6 +14,6 @@ class PlacesController < ApplicationController
   end
 
   def set_schedules
-    @schedules = Schedule.all.decorate
+    @schedules = Schedule.all.includes(area_sport: [:sport, { area: :place }]).decorate
   end
 end

@@ -10,7 +10,6 @@
           th scope="col"  エリア
           th.text-start.ps-4 scope="col"  場所
     tbody
-      / FIX: N+1対策する
       - @schedules.each do |schedule|
         tr
           th = schedule.date_and_day_of_week
