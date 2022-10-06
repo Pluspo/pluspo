@@ -1,0 +1,36 @@
+= search_form_for q, url: url, class: "d-flex" do |f|
+  = f.select :sport_name_eq, class: "form-control.me-2" list: "datalistOptions" placeholder: "スポーツ"
+    datalist#datalistOptions.me-2
+      = sports.each do |sport|
+        option value="#{sport.name}"
+
+  = f.date_field :started_at_eq, class: "form-control.me-2" id: "calendar" placeholder: "開始日時" readonly: "readonly"
+
+  = f.select :place_city_eq, class: "form-select.form-control.me-2"
+    option selected=""  エリア
+    option value="1" 中央区
+    option value="2" 千代田区
+    option value="3" 文京区
+    option value="4" 港区
+    option value="5" 新宿区
+    option value="6" 品川区
+    option value="7" 目黒区
+    option value="8" 大田区
+    option value="9" 世田谷区
+    option value="10" 渋谷区
+    option value="11" 中野区
+    option value="12" 杉並区
+    option value="13" 練馬区
+    option value="14" 板橋区
+    option value="15" 豊島区
+    option value="16" 北区
+    option value="17" 台東区
+    option value="18" 墨田区
+    option value="19" 江東区
+    option value="20" 荒川区
+    option value="21" 足立区
+    option value="22" 葛飾区
+    option value="23" 江戸川区
+
+  / TODO: 検索機能をajaxで実装したらSearchボタンは消す
+  = f.submit "Search", class: "btn.btn-primary.me-3"

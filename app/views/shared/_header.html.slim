@@ -2,19 +2,4 @@ nav.navbar.navbar-expand-lg.navbar-light.p-3 style="height: 65px; background-col
   .container-fluid
     .me-5
       = image_tag  "logo_no_subtitle.png", { width: '150px' }
-    form.d-flex
-      input.form-control.me-2 list="datalistOptions" placeholder="スポーツ"
-      datalist#datalistOptions.me-2
-        option value="テニス"
-        option value="バスケットボール"
-        option value="バレーボール"
-        option value="水泳・プール"
-        option value="卓球"
-      input.form-control.me-2#calendar type="text" placeholder="開始日時" readonly="readonly"
-      select.form-select.form-control.me-2
-        option selected=""  エリア
-        option value="1"  台東区
-        option value="2"  大田区
-        option value="3"  文京区
-      / TODO: 検索機能をajaxで実装したらSearchボタンは消す
-      button.btn.btn-primary.me-3 type="submit"  Search
+    = render 'shared/search_schedule_form', url: turbo_recede_historical_location_path, q: @q sports: @sports
