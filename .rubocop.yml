@@ -76,9 +76,6 @@ Style/HashTransformValues:
 Style/SlicingWithRange:
   Enabled: true
 
-Style/EmptyMethod:
-  EnforcedStyle: expanded
-
 Rails/UnknownEnv:
   Environments:
     - production
