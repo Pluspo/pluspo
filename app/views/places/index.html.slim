@@ -1,7 +1,7 @@
 .row
   .col-6
     - if @search_schedules
-      = render 'schedule', schedule: @search_schedules
+      = render 'schedule', schedules: @search_schedules
     - else
       = render @schedules
   .col-6
