@@ -1,8 +1,19 @@
 class PlacesController < ApplicationController
-  def index
-    # FIX: 画面左でクリックした施設を表示したい
-    @place = Place.first.decorate # これだと右側に台東リバーサイドスポーツセンターしか表示されない
-    # FIX: N+1対策する
-    @schedules = Schedule.all.decorate
+  before_action :set_place, only: %i[index show]
+  before_action :set_schedules, only: %i[index show]
+
+  def index; end
+
+  def show; end
+
+  private
+
+  def set_place
+    params[:id] ||= 1 # なんか違う気もする
+    @place = Place.find(params[:id]).decorate
+  end
+
+  def set_schedules
+    @schedules = Schedule.all.includes(area_sport: [:sport, { area: :place }]).decorate
   end
 end

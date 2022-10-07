@@ -17,4 +17,5 @@
           td = schedule.full_time
           td = schedule.area_sport.sport.name
           td = schedule.area_sport.area.place.city
-          td = schedule.area_sport.area.place.name
+          td = link_to places_path(id: schedule.area_sport.area.place.id), class: 'link-dark' do
+            = schedule.area_sport.area.place.name
