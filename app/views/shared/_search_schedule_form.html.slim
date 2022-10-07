@@ -3,6 +3,7 @@
     /datalist#datalistOptions.me-2
     /  = sports.each do |sport|
     /    option value="#{sport.name}"
+
   = f.date_field :started_at_eq, class: "form-control me-2", id: "calendar", placeholder: "開始日時", readonly: "readonly"
 
   // TODO: 後でマスタ化
