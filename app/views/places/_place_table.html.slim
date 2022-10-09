@@ -1,0 +1,15 @@
+.place_table
+  table.table.table-sm.table-hover
+    thead
+      tr.text-center
+        .mt-4
+          / TODO: モデル名を日本語翻訳して表示する
+          th scope="col"  日付
+          th scope="col"  時刻
+          th scope="col"  スポーツ
+          th scope="col"  エリア
+          th.text-start.ps-4 scope="col"  場所
+    tbody
+      = render @schedules
+  .d-flex.justify-content-end.mt-3
+    = paginate @schedules
