@@ -713,6 +713,1287 @@ places_params = [
         ]
       }
     ]
+  },
+  {
+    id: 4,
+    name: '町田市立総合体育館',
+    city: '町田市',
+    address: '南成瀬5-12',
+    opened_at: '9:00',
+    closed_at: '21:00',
+    message: "営業時間 \n午前9時～午後9時\n休館日\n毎月第1・第3月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：042-724-3440\nファクス：042-724-3441",
+    areas: [
+      {
+        id: 20,
+        name: 'メインアリーナ',
+        location: :indoors,
+        note: "バドミントン、バレーボール、バスケットボール、卓球、などでご利用いただけます。その他器械体操、新体操も利用可能です。また、2階客席の中断にジョギングコースが設けられています。\n撮影や営利目的では使用できません。",
+        sports: [
+          {
+            name: 'バドミントン',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '卓球',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バレーボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バスケットボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ジョギング',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 21,
+        name: 'サブアリーナ',
+        location: :indoors,
+        note: 'バスケットゴールは1台のみ',
+        sports: [
+          {
+            name: 'バドミントン',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '卓球',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バレーボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バスケットボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'インディアカ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 22,
+        name: '小体育室',
+        location: :indoors,
+        note: '卓球、各種ダンス、健康体操などでご利用いただけます',
+        sports: [
+          {
+            name: '卓球',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '剣道',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '空手',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'なぎなた',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '少林寺拳法',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '太極拳',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '武道・格闘技(その他)',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '社交ダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'エアロビクス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'フォークダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'クラシックバレエ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'モダンバレエ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'スクエアダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '民謡・盆踊り',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '健康体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '親子体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'リズム体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ヨガ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '気功',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 23,
+        name: '第一武道場',
+        location: :outdoors,
+        note: '剣道、空手、各種武道などにご利用いただけます。その他、ダンス、バレエ、踊りや体操などでもご利用いただけます。',
+        sports: [
+          {
+            name: '剣道',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '空手',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'なぎなた',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '少林寺拳法',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '太極拳',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '武道・格闘技(その他)',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '社交ダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'エアロビクス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'フォークダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'クラシックバレエ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'モダンバレエ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'スクエアダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '民謡・盆踊り',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '健康体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '親子体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'リズム体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ヨガ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '気功',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 24,
+        name: '第二武道場',
+        location: :indoors,
+        note: "柔道、合気道、各種武道などにご利用いただけます。その他ヨーガ、体操での利用が可能です。",
+        sports: [
+          {
+            name: '空手',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '柔道',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '合気道',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'なぎなた',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '少林寺拳法',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '太極拳',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '武道・格闘技(その他)',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '健康体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '親子体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ヨガ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '気功',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 25,
+        name: '和洋弓道場',
+        location: :indoors,
+        note: "総合体育館で実施される教室に参加された方には、和弓、アーチェリーともに弓具の貸出もおこなっております（教室終了から半年間）。和洋弓場については、開放もしくは大会でのみの利用となりますのでご了承下さい。\n※アーチェリーの開放は安全管理上、未経験の方は初心者向けの教室または講習会を受講してください。",
+        sports: [
+          {
+            name: '弓道',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'アーチェリー',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 26,
+        name: 'トレーニングルーム',
+        location: :indoors,
+        note: "脂肪燃焼に効果的な有酸素運動ができるランニングマシンや、基礎代謝アップ効果のある筋力トレーニングができるマシンやダンベル、その他楽しい運動ができるプログラムやトレーニング器具が揃っております。\n※トレーニングマシン初めてご利用の方は、「ビギナートレーニング」の受講をおすすめしております。トレーニングルーム内、マシンの使い方、運動の仕方、各種プログラムの紹介や利用マナー等をご案内いたします。",
+        sports: [
+          {
+            name: 'トレーニング',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 27,
+        name: '第一会議室',
+        location: :indoors,
+        note: "会議・講習、打ち合わせなどでご利用いただけます。また、第二会議室と併せてご利用いただくことも可能です。\nご利用の際は団体登録が必要です。",
+        sports: [
+          {
+            name: '会議・講習',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 28,
+        name: '第二会議室',
+        location: :indoors,
+        note: "会議・講習、打ち合わせなどでご利用いただけます。また、第一会議室と併せてご利用いただくことも可能です。\nご利用の際は団体登録が必要です。",
+        sports: [
+          {
+            name: '会議・講習',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: 'サン町田旭体育館',
+    city: '町田市',
+    address: '旭町3-20-60',
+    opened_at: '9:00',
+    closed_at: '21:00',
+    message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1・第3月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月28日～1月4日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：042-720-0611",
+    areas: [
+      {
+        id: 29,
+        name: 'アリーナ',
+        location: :indoors,
+        note: "バドミントン、バレーボール、バスケットボール、卓球などでご利用いただけます。その他、剣道や空手、新体操も利用可能です。",
+        sports: [
+          {
+            name: 'バドミントン',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バレーボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バスケットボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '卓球',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '剣道',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ニュースポーツ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 30,
+        name: '多目的室',
+        location: :indoors,
+        note: '卓球、各種ダンス、健康体操などでご利用いただけます。',
+        sports: [
+          {
+            name: 'エアロビクス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ラテンエアロビクス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '健康体操',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ヨガ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '自重トレーニング',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 31,
+        name: 'トレーニング室',
+        location: :indoors,
+        note: '脂肪燃焼に効果的な有酸素運動ができるランニングマシンや、基礎代謝アップ効果のある筋力トレーニングができるマシンやダンベル、その他楽しく運動ができるプログラムが揃っております。',
+        sports: [
+          {
+            name: 'トレーニング',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 32,
+        name: '会議室',
+        location: :outdoors,
+        note: '会議・講習、打ち合わせなどでご利用いただけます。ご利用の際は団体登録が必要です。',
+        sports: [
+          {
+            name: '会議',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '講習',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '打ち合わせ',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '太極拳',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 6,
+    name: '東京都障害者総合スポーツセンター',
+    city: '北区',
+    address: '十条台1-2-2',
+    opened_at: '9:00',
+    closed_at: '21:00',
+    message: "営業時間\n午前9時～午後9時00分\n休館日\n毎週水曜日(祝日の場合は翌日)\n祝日の翌日(日曜日の場合は休館しません)\n年末年始（12月29日～1月3日）\nまお、臨時休館する場合がございます。\nお問い合わせ\nスポーツ振興課担当\n電話：03-3907-5631/nファクス：03-3907-5613",
+    areas: [
+      {
+        id: 33,
+        name: '本館1階:体育館',
+        location: :indoors,
+        note: "様々な屋内スポーツにご利用できます。冷暖房設備をはじめ、試合や大会のための電光掲示板や放送設備があります。また、施設備品（用具）の貸出しを行っています。",
+        sports: [
+          {
+            name: 'バドミントン',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バレーボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'バスケットボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ゴールボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ハンドサッカー',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'シッティングバレーボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 34,
+        name: '本館1階:プール',
+        location: :indoors,
+        note: '全長25mで6コース完備されています。水深は1.1m～1.3mで水温は31度前後です。プールサイドは車いすからでも容易に入れるような構造になっています。また、右端の赤い部分のコースは、水深0.7～0.9mと浅くなっているコースもあります。採暖室・異性介護でもご利用できる家族更衣室も設置しています。',
+        sports: [
+          {
+            name: '水泳',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 35,
+        name: '本館2階:卓球室・サウンドテーブルテニス室',
+        location: :indoors,
+        note: '卓球室とサウンドテーブルテニス室を併設しています。卓球台５台、サウンドテーブルテニス用卓球台２台が設置されています。ラケット、ボール等の貸出しも行っています。',
+        sports: [
+          {
+            name: '卓球',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'サウンドテーブルテニス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 32,
+        name: '本館2階:宿泊施設',
+        location: :indoors,
+        note: '洋室6室（2人部屋×5、5人部屋×1）、和室1室（5人部屋×1）、最大で20名まで宿泊可能です。一部トイレ付きの部屋があります。各部屋には、テレビ、冷蔵庫、ポットがあります。また、宿泊者の共有部屋として談話室もご利用いただけます。',
+        sports: [
+          {
+            name: '洋室',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '和室',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: '大浴場',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 33,
+        name: '増築棟2階:洋弓場',
+        location: :indoors,
+        note: '利用するには認定証を取得しての利用となります。初心者からアスリートまで多くの方が共存しやすいよう70mまでのシューティングが可能な射場です。照明も完備しており、夜間（20時20分）まで利用が可能となっております。',
+        sports: [
+          {
+            name: 'アーチェリー',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '20:20'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 34,
+        name: '増築棟2階:研修室',
+        location: :indoors,
+        note: 'テレビモニターやDVDビデオデッキ、プロジェクター、スクリーンなどの機器を備えており、最大100人ほどの会議や研修、集会にご利用いただけます。また、2室に仕切ることもできますので、50人ほどの小研修室としてもご利用いただけます。',
+        sports: [
+          {
+            name: '研修室',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 35,
+        name: '増築棟1階:多目的室',
+        location: :indoors,
+        note: 'ゴールボール（１面）・ボッチャコート（３面）等のコートが設置されており、またダンスや体操系等でもご利用が出来ます。冷暖房設備もあり、施設備品（用具）の貸出しを行っています。',
+        sports: [
+          {
+            name: 'ゴールボール',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ボッチャコート',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          },
+          {
+            name: 'ダンス',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 36,
+        name: '増築棟1階:トレーニング室',
+        location: :indoors,
+        note: 'エアロバイク・ランニングマシーン等の有酸素機器や、上下肢の機器・各種ウエイトトレーニングマシーンが設置されています。また、上下肢のリラクゼーションを促すスリングエクササイズ・車いす利用の方でも有酸素運動が出来るモトメドもご利用出来ます。各障害特性に合わせ、利用しやすいよう工夫がされています。',
+        sports: [
+          {
+            name: 'トレーニング',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 37,
+        name: '運動場',
+        location: :outdoors,
+        note: '全天候型の200mトラックとフィールドの他、砂場（走幅跳び用）、天然芝が完備され、様々な屋外スポーツをお楽しみいただけます。照明も備えており、夜間（20時20分）まで利用可能となっております。また、円周走の用具など各種施設備品（用具）の貸出しを行っております。',
+        sports: [
+          {
+            name: 'トラック',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '20:20'
+              }
+            ]
+          },
+          {
+            name: 'フィールド',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '20:20'
+              }
+            ]
+          },
+          {
+            name: '砂場(走り幅跳び)',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '20:20'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 38,
+        name: '庭球場',
+        location: :outdoors,
+        note: 'ハードコートが3面完備されています。照明も備えており、夜間（20時20分）まで利用可能となっております。ラケット、ボール等の貸出しも行っています。',
+        sports: [
+          {
+            name: 'テニスコート(ハードコート)',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '20:20'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 39,
+        name: '集会室',
+        location: :indoors,
+        note: 'テレビモニターやDVDビデオデッキ、プロジェクター、スクリーンなどの機器を備えており、最大100人ほどの会議や研修、集会にご利用いただけます。また、3室に仕切ることもできますので、30人ほどの小集会室としてもご利用いただけます。',
+        sports: [
+          {
+            name: '集会室',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 40,
+        name: '印刷室',
+        location: :indoors,
+        note: '各種印刷物の作成に必要な、コピー機や紙折り機をご利用いただけます。',
+        sports: [
+          {
+            name: '印刷室',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 41,
+        name: '図書コーナー',
+        location: :indoors,
+        note: 'スポーツ、医学、健康、福祉などの資料を備え、情報提供の場としてご利用いただけます。',
+        sports: [
+          {
+            name: '図書コーナー',
+            schedules: [
+              {
+                cycle: :every,
+                started_at: '9:00',
+                finished_at: '21:00'
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
 
