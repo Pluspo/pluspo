@@ -1,10 +1,7 @@
 /= turbo_frame_tag @place do
 .row
   .col-6
-    - if @search_schedules
-      = render 'schedule', schedules: @search_schedules
-    - else
-      = render @schedules
+    = render 'place_table'
   .col-6
     .place-show style="background-color: aliceblue;"
       .row

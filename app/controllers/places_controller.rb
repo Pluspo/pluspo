@@ -14,6 +14,7 @@ class PlacesController < ApplicationController
   end
 
   def set_schedules
-    @schedules = Schedule.all.includes(area_sport: [:sport, { area: :place }]).decorate
+    @q = Schedule.ransack(params[:q])
+    @schedules = @q.result.page(params[:page]).includes(area_sport: [:sport, { area: :place }])
   end
 end
