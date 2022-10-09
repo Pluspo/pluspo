@@ -23,3 +23,32 @@ button.btn-primary:hover {
   background-color: #1b5972;
   border-color: #1b5972;
 }
+
+.pagination > li > a
+{
+    background-color: white;
+    color: #237291;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #237291;
+    background-color: #eee;
+    border-color: #237291;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #237291;
+    border: solid 1px #237291;
+}
+
+
+.pagination > .active > a {
+  color: white;
+  background-color: #237291 !important;
+  border: solid 1px #237291 !important;
+}
