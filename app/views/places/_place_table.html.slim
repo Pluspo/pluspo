@@ -11,4 +11,5 @@
           th.text-start.ps-4 scope="col"  場所
     tbody
       = render @schedules
-  = paginate @schedules
+  .d-flex.justify-content-end.mt-3
+    = paginate @schedules
