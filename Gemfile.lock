@@ -144,6 +144,18 @@ GEM
       activesupport (>= 5.0.0)
     json (2.6.2)
     jwt (2.5.0)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -153,6 +165,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.16.3)
     msgpack (1.5.6)
     multi_json (1.15.0)
@@ -172,6 +185,9 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
+    nokogiri (1.13.8)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-darwin)
@@ -191,6 +207,11 @@ GEM
     parser (3.1.2.1)
       ast (~> 2.4.1)
     pg (1.4.3)
+    pry (0.14.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -217,6 +238,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
+    rails-i18n (7.0.5)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.3.1)
       actionpack (= 7.0.3.1)
       activesupport (= 7.0.3.1)
@@ -226,6 +250,10 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    ransack (3.2.1)
+      activerecord (>= 6.1.5)
+      activesupport (>= 6.1.5)
+      i18n
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -327,6 +355,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  ruby
   x86_64-darwin-19
   x86_64-darwin-21
   x86_64-linux
@@ -344,9 +373,13 @@ DEPENDENCIES
   html2slim
   importmap-rails
   jbuilder
+  kaminari
   pg
+  pry-rails
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
+  rails-i18n
+  ransack
   rspec-rails (= 6.0.0.rc1)
   rubocop
   rubocop-performance

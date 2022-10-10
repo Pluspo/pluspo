@@ -51,6 +51,9 @@ gem 'seed-fu'
 gem 'annotate'
 gem 'draper'
 gem 'sorcery'
+gem 'ransack'
+gem 'rails-i18n'
+gem 'kaminari'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -65,6 +68,7 @@ group :development do
   gem "web-console"
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry-rails'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

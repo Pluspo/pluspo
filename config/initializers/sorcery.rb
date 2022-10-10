@@ -218,7 +218,6 @@ Rails.application.config.sorcery.configure do |config|
   # config.salesforce.callback_url = "https://127.0.0.1:9292/oauth/callback?provider=salesforce"
   # config.salesforce.scope = "full"
   # config.salesforce.user_info_mapping = {:email => "email"}
-
   # config.line.key = ""
   # config.line.secret = ""
   # config.line.callback_url = "http://mydomain.com:3000/oauth/callback?provider=line"
@@ -226,7 +225,6 @@ Rails.application.config.sorcery.configure do |config|
   # config.line.bot_prompt = "normal"
   # config.line.user_info_mapping = {name: 'displayName'}
 
-  
   # For information about Discord API
   # https://discordapp.com/developers/docs/topics/oauth2
   # config.discord.key = "xxxxxx"
