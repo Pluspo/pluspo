@@ -23,7 +23,9 @@ test:
 production:
   <<: *default
   adapter: postgresql
+  encoding: unicode
+  url: <%= ENV["DATABASE_URL"] %>
+  database: d63po92c84ephs
   username: <%= ENV['DB_USER_NAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
-  encoding: unicode
   pool: 5
