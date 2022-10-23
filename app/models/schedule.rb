@@ -26,4 +26,61 @@ class Schedule < ApplicationRecord
     validates :started_at
     validates :finished_at
   end
+
+  class << self
+    def insert_schedule_from_batch(batch)
+      dates = create_date_from_cycle(batch.cycle)
+      started_at_arr = batch.started_at.split(':')
+      finished_at_arr = batch.finished_at.split(':')
+
+      dates.each do |date|
+        Schedule.create!(
+          area_sport_id: batch.area_sport_id,
+          started_at: date.change(hour: started_at_arr[0], min: started_at_arr[1]),
+          finished_at: date.change(hour: finished_at_arr[0], min: finished_at_arr[1])
+        )
+      end
+    end
+
+
+    # 日付を出すだけ
+    def create_date_from_cycle(cycle)
+      res = []
+      week, day_of_week = cycle.to_s.split('_').map(&:to_sym)
+
+      # :everyのときの処理 # FIX: :everyは施設の営業時間による
+      if week == :every && day_of_week.nil?
+        ((Time.now.next_month.beginning_of_month)..(Time.now.next_month.end_of_month)).each do |i|
+          # みたいなことしたい
+          res << i.date
+        end
+        return
+      end
+
+      # 来月の最初の :day_of_week 曜日
+      first_day_of_week = Time.now.next_month.beginning_of_month.next_occurring(:day_of_week)
+      current_month = first_day_of_week.month
+
+      case week
+      when :every
+        # 5週間作って
+        5.times do |i|
+          # 来月の日付だったらpop
+          res << first_day_of_week.since i.week
+          res.pop if res[-1].month != current_month
+        end
+      when :first
+        res << first_day_of_week.since 0.week
+      when :second
+        res << first_day_of_week.since 1.week
+      when :third
+        res << first_day_of_week.since 2.week
+      when :fourth
+        res << first_day_of_week.since 3.week
+      when :fifth
+        fifth_day_of_week = first_day_of_week.since 4.week
+        res << fifth_day_of_week if fifth_day_of_week.month == current_month
+      end
+    end
+  end
 end
