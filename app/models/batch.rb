@@ -21,7 +21,7 @@
 class Batch < ApplicationRecord
   enum cycle: {
     unknown: 0,
-    every: 1,
+    every: 1, # 施設の開館時間は常にできるスポーツ
     every_monday: 10,
     first_monday: 11,
     second_monday: 12,
