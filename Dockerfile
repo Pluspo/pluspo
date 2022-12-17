@@ -41,10 +41,9 @@ COPY package.json /$APP_NAME/package.json
 
 COPY . /$APP_NAME/
 
+RUN SECRET_KEY_BASE="$(bundle exec rake secret)" bin/rails assets:precompile assets:clean
 RUN yarn install --production --frozen-lockfile
-RUN yarn build:css
-# RUN yarn build
-RUN yarn cache clean 
+RUN yarn cache clean
 RUN rm -rf /$APP_NAME/node_modules /$APP_NAME/tmp/cache
 
 COPY entrypoint.sh /usr/bin/
