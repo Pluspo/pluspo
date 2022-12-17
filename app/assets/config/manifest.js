@@ -1,4 +1,4 @@
+//= link_tree ../../javascript/controllers
+//= link_tree ../../javascript/custom
 //= link_tree ../images
-//= link_tree ../../javascript .js
-//= link_tree ../../../vendor/javascript .js
 //= link_tree ../builds
