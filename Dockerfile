@@ -43,7 +43,7 @@ COPY . /$APP_NAME/
 
 RUN yarn install --production --frozen-lockfile
 RUN yarn build:css
-RUN yarn build
+# RUN yarn build
 RUN yarn cache clean 
 RUN rm -rf /$APP_NAME/node_modules /$APP_NAME/tmp/cache
 
