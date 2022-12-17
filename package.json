@@ -2,6 +2,7 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@hotwired/turbo-rails": "^7.2.4",
     "autoprefixer": "^10.4.13",
     "daisyui": "^2.38.1",
     "esbuild": "^0.15.13",
