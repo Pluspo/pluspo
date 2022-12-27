@@ -15,6 +15,6 @@ class PlacesController < ApplicationController
 
   def set_schedules
     @q = Schedule.ransack(params[:q])
-    @schedules = @q.result.page(params[:page]).includes(area_sport: [:sport, { area: :place }]).order(started_at: :asc, finished_at: :asc).order("sport.name")
+    @schedules = @q.result.page(params[:page]).includes(area_sport: [:sport, { area: :place }]).order(started_at: :asc, finished_at: :asc).order("sport.name").after_today
   end
 end

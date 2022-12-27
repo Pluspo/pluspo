@@ -27,6 +27,8 @@ class Schedule < ApplicationRecord
     validates :finished_at
   end
 
+  scope :after_today, -> { where("started_at >= ?", Time.current) }
+
   class << self
     def insert_schedule_from_batch(batch)
       dates = build_date_from_cycle(batch.cycle)
