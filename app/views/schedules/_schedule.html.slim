@@ -1,7 +1,7 @@
 tr
   th = schedule.decorate.date_and_day_of_week
   td = schedule.decorate.full_time
-  td = schedule.area_sport.sport.name
-  td = schedule.area_sport.area.place.city
-  td = link_to places_path(id: schedule.area_sport.area.place.id), class: 'link-dark', data: { turbo_frame: :place } do
-    = schedule.area_sport.area.place.name
+  td = schedule.sport.name
+  td = schedule.place.city
+  td = link_to places_path(id: schedule.place.id), class: 'link-dark', data: { turbo_frame: :place } do
+    = schedule.place.name
