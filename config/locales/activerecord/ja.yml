@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    models:
+      sport: 'スポーツ'
+      area: 'エリア'
+      place: '場所'

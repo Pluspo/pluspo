@@ -2,3 +2,7 @@ ja:
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
+  schedule:
+    decorate:
+      full_time: '時刻'
+      date_and_day_of_week: '日付'

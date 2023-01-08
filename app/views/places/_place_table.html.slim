@@ -4,11 +4,11 @@
       tr.text-center
         .mt-4
           / TODO: モデル名を日本語翻訳して表示する
-          th scope="col"  日付
-          th scope="col"  時刻
-          th scope="col"  スポーツ
-          th scope="col"  エリア
-          th.text-start.ps-4 scope="col"  場所
+          th scope="col"  = t('schedule.decorate.date_and_day_of_week')
+          th scope="col"  = t('schedule.decorate.full_time')
+          th scope="col"  = Sport.model_name.human
+          th scope="col"  = Area.model_name.human
+          th.text-start.ps-4 scope="col"  = Place.model_name.human
     tbody
       = render @schedules
   .d-flex.justify-content-center.mt-3
