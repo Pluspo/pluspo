@@ -3,5 +3,5 @@ ja:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
   general:
-    time: '時刻'
-    date: '日付'
+    time: 時刻
+    date: 日付
