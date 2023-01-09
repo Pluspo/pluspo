@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       sport: スポーツ
-      place: 場所
     attributes:
       place:
-        city: エリア
+        area: 地区 
+        name: 施設名
