@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      sport: スポーツ
+    attributes:
+      place:
+        city: 地区 
+        name: 施設名
