@@ -4,5 +4,5 @@ ja:
       sport: スポーツ
     attributes:
       place:
-        area: 地区 
+        city: 地区 
         name: 施設名
