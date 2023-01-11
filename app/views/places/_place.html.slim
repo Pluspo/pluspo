@@ -4,11 +4,11 @@
   .
     .row.place-info
       #list-example.list-group.col-3.ms-4
-        a.list-group-item.list-group-item-action href="#scrollspyHeading1"  施設名称
-        a.list-group-item.list-group-item-action href="#scrollspyHeading2"  所在地
-        a.list-group-item.list-group-item-action href="#scrollspyHeading3"  スポーツ
-        a.list-group-item.list-group-item-action href="#scrollspyHeading4"  開館時間
-        a.list-group-item.list-group-item-action href="#scrollspyHeading5"  その他
+        = link_to '施設名称', '#scrollspyHeading1', class: 'list-group-item list-group-item-action'
+        = link_to '所在地', '#scrollspyHeading2', class: 'list-group-item list-group-item-action'
+        = link_to 'スポーツ', '#scrollspyHeading3', class: 'list-group-item list-group-item-action'
+        = link_to '閉館時間', '#scrollspyHeading4', class: 'list-group-item list-group-item-action'
+        = link_to 'その他', '#scrollspyHeading5', class: 'list-group-item list-group-item-action'
 
       / FIX: 高さ指定をレスポンシブにしたい...BootStrapナニモワカラナイ
       .scrollspy-example.col-8 data-bs-offset="0" data-bs-spy="scroll" data-bs-target="#list-example" tabindex="0" style="height: 300px; overflow-y: scroll;"
