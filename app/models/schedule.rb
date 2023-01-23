@@ -35,7 +35,7 @@ class Schedule < ApplicationRecord
   class << self
     def insert_schedule_from_batch(batch)
       dates = build_date_from_cycle(batch.cycle)
-      times = dates.map(&:to_time)
+      times = dates&.map(&:to_time)
       started_at_arr = batch.started_at.split(':')
       finished_at_arr = batch.finished_at.split(':')
 
