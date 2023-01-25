@@ -35,7 +35,7 @@ class Schedule < ApplicationRecord
   class << self
     def insert_schedule_from_batch(batch)
       dates = build_date_from_cycle(batch.cycle)
-      times = dates.map(&:to_time)
+      times = dates&.map(&:to_time)
       started_at_arr = batch.started_at.split(':')
       finished_at_arr = batch.finished_at.split(':')
 
@@ -61,8 +61,8 @@ class Schedule < ApplicationRecord
       return Date.current.next_month.all_month.to_a if (week == :every) && day_of_week.nil?
 
       # 来月の最初の :day_of_week 曜日
-      # FIXME: 1日が月曜日の時に next_occurring(:monday)とすると、8日を返してしまう
-      first_day_of_week = Date.current.next_month.beginning_of_month.next_occurring(day_of_week)
+      first_day_of_week_next_month = Date.current.next_month.beginning_of_month
+      first_day_of_week = first_day_of_week_next_month.strftime('%A').downcase.to_sym == day_of_week ? first_day_of_week_next_month : first_day_of_week_next_month.next_occurring(day_of_week)
       current_month = first_day_of_week.month
 
       case week
