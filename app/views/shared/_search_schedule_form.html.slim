@@ -1,5 +1,5 @@
 button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
-  | 検索
+  = t('defaults.search')
 .modal.fade id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
   .modal-dialog
     .modal-content
@@ -20,6 +20,6 @@ button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data
           = f.select :area_sport_area_place_city_eq, options_for_select(cities), {include_blank: 'エリア'}, class: 'form-select form-control me-2 mb-4'
           / TODO: 検索機能をajaxで実装したらSearchボタンは消す
           .d-grid.gap-2
-            = button_tag '検索', class: 'btn btn-outline-success'
+            = button_tag t('defaults.search'), class: 'btn btn-outline-success'
       .modal-footer
         button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
