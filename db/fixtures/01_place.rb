@@ -2018,3 +2018,10 @@ places_params.each do |place_params|
     end
   end
 end
+
+Place.where(latitude: nil).each do |place|
+  place.valid?
+  p place.full_address
+  p place.inspect
+  place.save!
+end

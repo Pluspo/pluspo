@@ -126,8 +126,10 @@ GEM
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.0)
+    geocoder (1.8.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    gmaps4rails (2.1.2)
     hashie (5.0.0)
     hpricot (0.8.6)
     html2slim (0.2.0)
@@ -373,6 +375,8 @@ DEPENDENCIES
   debug
   draper
   factory_bot_rails
+  geocoder
+  gmaps4rails
   html2slim
   importmap-rails
   jbuilder
