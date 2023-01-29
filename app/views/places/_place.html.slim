@@ -27,6 +27,5 @@
         h4#scrollspyHeading4 開館時間
         p = place.opening_hours
         h4#scrollspyHeading5 その他
-        - place.message.split("\n").each do |message|
-          p = message
-        / TODO: areaごとのnoteもこの下に表示したい
+        = auto_phone_to(auto_link(simple_format(place.message.gsub(/\n/, "\n\n"), wrapper_tag: 'p'), html: {target: '_blank'}))
+        // TODO: areaごとのnoteもこの下に表示したい
