@@ -15,6 +15,7 @@ places_params = [
     address: '今戸1丁目1番10号',
     opened_at: '9:00',
     closed_at: '22:00',
+    place_url: 'https://www.taitocity.net/zaidan/riverside/'
     message: "利用受付(窓口) : 午前9時から午後7時まで(第1月曜日・祝日の月曜日は午後5時まで)\n開館時間 : 午前9時から午後10時まで（午後9時最終入館）月曜日の開館日は午後6時まで(午後5時最終入館)\n休館日:毎週月曜日(第1月曜日及び祝日の月曜日を除く)\n問合せ:台東リバーサイドスポーツセンター 管理事務所\n電話   03-3872-3181\nFAX   03-3872-3184\n施設HP: https://www.taitocity.net/zaidan/riverside/general/",
     areas: [
       {
@@ -463,6 +464,7 @@ places_params = [
     address: '浅草橋5丁目1番8号',
     opened_at: '17:00',
     closed_at: '21:00',
+    place_url: 'https://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html'
     message: "営業時間\n利用（テニスコート）\n平日：17時から21時\n土日祝：9時から21時\n利用（体育館）\n平日：18時から21時\n土日祝：9時から21時\n受付（通常）\n平日：17時から21時\n土日祝：9時から21時\n受付（プールオープン期間：6月から9月末）\n 平日：13時から21時\n 土日祝：9時から21時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日から1月3日）\nhttps://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html",
     areas: [
       {
@@ -578,6 +580,7 @@ places_params = [
     address: '日本堤2丁目25番4号',
     opened_at: '9:00',
     closed_at: '21:00',
+    place_url: 'https://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/tanaka/tanakasports.html'
     message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：03-5246-5853\nファクス：03-5246-5814",
     areas: [
       {
@@ -721,6 +724,7 @@ places_params = [
     address: '南成瀬5-12',
     opened_at: '9:00',
     closed_at: '21:00',
+    place_url: 'https://www.city.machida.tokyo.jp/bunka/sport/sport/sport07.html'
     message: "営業時間 \n午前9時～午後9時\n休館日\n毎月第1・第3月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：042-724-3440\nファクス：042-724-3441",
     areas: [
       {
@@ -1389,42 +1393,6 @@ places_params = [
           }
         ]
       },
-      {
-        id: 27,
-        name: '第一会議室',
-        location: :indoors,
-        note: "会議・講習、打ち合わせなどでご利用いただけます。また、第二会議室と併せてご利用いただくことも可能です。\nご利用の際は団体登録が必要です。",
-        sports: [
-          {
-            name: '会議・講習',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 28,
-        name: '第二会議室',
-        location: :indoors,
-        note: "会議・講習、打ち合わせなどでご利用いただけます。また、第一会議室と併せてご利用いただくことも可能です。\nご利用の際は団体登録が必要です。",
-        sports: [
-          {
-            name: '会議・講習',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          }
-        ]
-      }
     ]
   },
   {
@@ -1434,6 +1402,7 @@ places_params = [
     address: '旭町3-20-60',
     opened_at: '9:00',
     closed_at: '21:00',
+    place_url: 'https://www.city.machida.tokyo.jp/bunka/sport/sport/sport08.html'
     message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1・第3月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月28日～1月4日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：042-720-0611",
     areas: [
       {
@@ -1587,36 +1556,6 @@ places_params = [
         note: '会議・講習、打ち合わせなどでご利用いただけます。ご利用の際は団体登録が必要です。',
         sports: [
           {
-            name: '会議',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          },
-          {
-            name: '講習',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          },
-          {
-            name: '打ち合わせ',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          },
-          {
             name: '太極拳',
             schedules: [
               {
@@ -1637,6 +1576,7 @@ places_params = [
     address: '十条台1-2-2',
     opened_at: '9:00',
     closed_at: '21:00',
+    place_url: 'https://tsad-portal.com/mscd'
     message: "営業時間\n午前9時～午後9時00分\n休館日\n毎週水曜日(祝日の場合は翌日)\n祝日の翌日(日曜日の場合は休館しません)\n年末年始（12月29日～1月3日）\nまお、臨時休館する場合がございます。\nお問い合わせ\nスポーツ振興課担当\n電話：03-3907-5631/nファクス：03-3907-5613",
     areas: [
       {
@@ -1754,44 +1694,6 @@ places_params = [
         ]
       },
       {
-        id: 36,
-        name: '本館2階:宿泊施設',
-        location: :indoors,
-        note: '洋室6室（2人部屋×5、5人部屋×1）、和室1室（5人部屋×1）、最大で20名まで宿泊可能です。一部トイレ付きの部屋があります。各部屋には、テレビ、冷蔵庫、ポットがあります。また、宿泊者の共有部屋として談話室もご利用いただけます。',
-        sports: [
-          {
-            name: '洋室',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          },
-          {
-            name: '和室',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          },
-          {
-            name: '大浴場',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          }
-        ]
-      },
-      {
         id: 37,
         name: '増築棟2階:洋弓場',
         location: :indoors,
@@ -1804,24 +1706,6 @@ places_params = [
                 cycle: :every,
                 started_at: '9:00',
                 finished_at: '20:20'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 38,
-        name: '増築棟2階:研修室',
-        location: :indoors,
-        note: 'テレビモニターやDVDビデオデッキ、プロジェクター、スクリーンなどの機器を備えており、最大100人ほどの会議や研修、集会にご利用いただけます。また、2室に仕切ることもできますので、50人ほどの小研修室としてもご利用いただけます。',
-        sports: [
-          {
-            name: '研修室',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
               }
             ]
           }
@@ -1844,7 +1728,7 @@ places_params = [
             ]
           },
           {
-            name: 'ボッチャコート',
+            name: 'ボッチャ',
             schedules: [
               {
                 cycle: :every,
@@ -1939,60 +1823,6 @@ places_params = [
           }
         ]
       },
-      {
-        id: 43,
-        name: '集会室',
-        location: :indoors,
-        note: 'テレビモニターやDVDビデオデッキ、プロジェクター、スクリーンなどの機器を備えており、最大100人ほどの会議や研修、集会にご利用いただけます。また、3室に仕切ることもできますので、30人ほどの小集会室としてもご利用いただけます。',
-        sports: [
-          {
-            name: '集会室',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 44,
-        name: '印刷室',
-        location: :indoors,
-        note: '各種印刷物の作成に必要な、コピー機や紙折り機をご利用いただけます。',
-        sports: [
-          {
-            name: '印刷室',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 45,
-        name: '図書コーナー',
-        location: :indoors,
-        note: 'スポーツ、医学、健康、福祉などの資料を備え、情報提供の場としてご利用いただけます。',
-        sports: [
-          {
-            name: '図書コーナー',
-            schedules: [
-              {
-                cycle: :every,
-                started_at: '9:00',
-                finished_at: '21:00'
-              }
-            ]
-          }
-        ]
-      }
     ]
   }
 ]
