@@ -15,7 +15,6 @@ places_params = [
     address: '今戸1丁目1番10号',
     opened_at: '9:00',
     closed_at: '22:00',
-    place_url: 'https://www.taitocity.net/zaidan/riverside/'
     message: "利用受付(窓口) : 午前9時から午後7時まで(第1月曜日・祝日の月曜日は午後5時まで)\n開館時間 : 午前9時から午後10時まで（午後9時最終入館）月曜日の開館日は午後6時まで(午後5時最終入館)\n休館日:毎週月曜日(第1月曜日及び祝日の月曜日を除く)\n問合せ:台東リバーサイドスポーツセンター 管理事務所\n電話   03-3872-3181\nFAX   03-3872-3184\n施設HP: https://www.taitocity.net/zaidan/riverside/general/",
     areas: [
       {
@@ -464,8 +463,7 @@ places_params = [
     address: '浅草橋5丁目1番8号',
     opened_at: '17:00',
     closed_at: '21:00',
-    place_url: 'https://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html'
-    message: "営業時間\n利用（テニスコート）\n平日：17時から21時\n土日祝：9時から21時\n利用（体育館）\n平日：18時から21時\n土日祝：9時から21時\n受付（通常）\n平日：17時から21時\n土日祝：9時から21時\n受付（プールオープン期間：6月から9月末）\n 平日：13時から21時\n 土日祝：9時から21時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日から1月3日）\nhttps://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html",
+    message: "営業時間\n利用（テニスコート）\n平日：17時から21時\n土日祝：9時から21時\n利用（体育館）\n平日：18時から21時\n土日祝：9時から21時\n受付（通常）\n平日：17時から21時\n土日祝：9時から21時\n受付（プールオープン期間：6月から9月末）\n 平日：13時から21時\n 土日祝：9時から21時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日から1月3日）\n施設HP: https://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/ryuuhoku/ryuuhokusport.html",
     areas: [
       {
         id: 13,
@@ -580,8 +578,7 @@ places_params = [
     address: '日本堤2丁目25番4号',
     opened_at: '9:00',
     closed_at: '21:00',
-    place_url: 'https://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/tanaka/tanakasports.html'
-    message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：03-5246-5853\nファクス：03-5246-5814",
+    message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：03-5246-5853\n施設HP: https://www.city.taito.lg.jp/gakushu/sports/sportssisetsuichiran/tanaka/tanakasports.html",
     areas: [
       {
         id: 16,
@@ -724,8 +721,7 @@ places_params = [
     address: '南成瀬5-12',
     opened_at: '9:00',
     closed_at: '21:00',
-    place_url: 'https://www.city.machida.tokyo.jp/bunka/sport/sport/sport07.html'
-    message: "営業時間 \n午前9時～午後9時\n休館日\n毎月第1・第3月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：042-724-3440\nファクス：042-724-3441",
+    message: "営業時間 \n午前9時～午後9時\n休館日\n毎月第1・第3月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月29日～1月3日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：042-724-3440\n施設HP: https://www.city.machida.tokyo.jp/bunka/sport/sport/sport07.html",
     areas: [
       {
         id: 20,
@@ -1402,8 +1398,7 @@ places_params = [
     address: '旭町3-20-60',
     opened_at: '9:00',
     closed_at: '21:00',
-    place_url: 'https://www.city.machida.tokyo.jp/bunka/sport/sport/sport08.html'
-    message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1・第3月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月28日～1月4日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：042-720-0611",
+    message: "営業時間\n午前9時～午後9時\n休館日\n毎月第1・第3月曜日（月曜日が祝日の場合は次の平日）\n年末年始（12月28日～1月4日）\n第2・4土曜日午前9時から12時30分まで、グラウンドを無料開放しています!\nお問い合わせ\nスポーツ振興課担当\n電話：042-720-0611\n施設HP: https://www.city.machida.tokyo.jp/bunka/sport/sport/sport08.html",
     areas: [
       {
         id: 29,
@@ -1576,8 +1571,7 @@ places_params = [
     address: '十条台1-2-2',
     opened_at: '9:00',
     closed_at: '21:00',
-    place_url: 'https://tsad-portal.com/mscd'
-    message: "営業時間\n午前9時～午後9時00分\n休館日\n毎週水曜日(祝日の場合は翌日)\n祝日の翌日(日曜日の場合は休館しません)\n年末年始（12月29日～1月3日）\nまお、臨時休館する場合がございます。\nお問い合わせ\nスポーツ振興課担当\n電話：03-3907-5631/nファクス：03-3907-5613",
+    message: "営業時間\n午前9時～午後9時00分\n休館日\n毎週水曜日(祝日の場合は翌日)\n祝日の翌日(日曜日の場合は休館しません)\n年末年始（12月29日～1月3日）\nまお、臨時休館する場合がございます。\nお問い合わせ\nスポーツ振興課担当\n電話：03-3907-5631\n施設HP: https://tsad-portal.com/mscd",
     areas: [
       {
         id: 33,
