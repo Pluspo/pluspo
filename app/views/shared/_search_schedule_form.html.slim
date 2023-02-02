@@ -14,12 +14,7 @@ button.btn.btn-outline-success data-bs-toggle="modal" data-bs-target="#exampleMo
           span
             h2.text-center.mb-1. ≀
           = f.date_field :finished_at_lteq_end_of_day, class: "form-control me-2 mb-4", id: "calendar-2", placeholder: "終了日時"
-
-          // TODO: 後でマスタ化
-          - cities = ['中央区', '千代田区', '文京区', '港区', '新宿区', '品川区', '目黒区', '大田区', '世田谷区', '渋谷区', '中野区', '杉並区', '練馬区', '板橋区', '豊島区', '北区', '台東区', '墨田区', '江東区', '荒川区', '足立区', '葛飾区', '江戸川区']
-          = f.select :area_sport_area_place_city_eq, options_for_select(cities), {include_blank: 'エリア'}, class: 'form-select form-control me-2 mb-4'
-          / TODO: 検索機能をajaxで実装したらSearchボタンは消す
-          .d-grid.gap-2
-            = button_tag t('defaults.search'), class: 'btn btn-outline-success'
-      .modal-footer
-        button.btn-close type="button" data-bs-dismiss="modal" aria-label="Close"
+          
+  = f.select :area_sport_area_place_city_eq, options_for_select(Place.all.pluck(:city).uniq), {include_blank: 'エリア'}, class: 'form-select form-control me-2'
+  / TODO: 検索機能をajaxで実装したらSearchボタンは消す
+  = button_tag 'Search', class: 'btn btn-primary'
