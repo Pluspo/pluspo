@@ -15,7 +15,11 @@
         h4#scrollspyHeading1 施設名称
         p = place.name
         h4#scrollspyHeading2 所在地
-        p = "東京都#{place.city} #{place.address}"
+        p
+          = "東京都#{place.city} #{place.address}"
+          = link_to "https://maps.google.com/maps?ll=#{place.latitude},#{place.longitude}&z=17&q=#{place.latitude},#{place.longitude}", target: '_blank' do
+            span.mx-1.p-1
+              = image_tag 'googlemap.png'
         h4#scrollspyHeading3 スポーツ
         p.sports-icons
           / TODO: 施設で利用できるスポーツを動的に表示する

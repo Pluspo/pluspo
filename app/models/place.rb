@@ -6,6 +6,8 @@
 #  address    :string           not null
 #  city       :string           not null
 #  closed_at  :datetime         not null
+#  latitude   :decimal(9, 6)
+#  longitude  :decimal(10, 6)
 #  message    :text
 #  name       :string           not null
 #  opened_at  :datetime         not null
@@ -19,6 +21,8 @@
 #
 class Place < ApplicationRecord
   has_many :areas, dependent: :destroy
+  geocoded_by :full_address
+  after_validation :geocode
 
   validates :name, presence: true, uniqueness: true
   with_options presence: true do
@@ -26,5 +30,9 @@ class Place < ApplicationRecord
     validates :closed_at
     validates :address
     validates :city
+  end
+
+  def full_address
+    "東京都#{city}#{address}"
   end
 end

@@ -1840,3 +1840,7 @@ places_params.each do |place_params|
     end
   end
 end
+
+Place.where(latitude: nil).each do |place|
+  place.save!
+end
