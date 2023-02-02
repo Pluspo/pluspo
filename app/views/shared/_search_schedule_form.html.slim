@@ -14,7 +14,6 @@ button.btn.btn-outline-success data-bs-toggle="modal" data-bs-target="#exampleMo
           span
             h2.text-center.mb-1. ≀
           = f.date_field :finished_at_lteq_end_of_day, class: "form-control me-2 mb-4", id: "calendar-2", placeholder: "終了日時"
-          
-  = f.select :area_sport_area_place_city_eq, options_for_select(Place.all.pluck(:city).uniq), {include_blank: 'エリア'}, class: 'form-select form-control me-2'
-  / TODO: 検索機能をajaxで実装したらSearchボタンは消す
-  = button_tag 'Search', class: 'btn btn-primary'
+          = f.select :area_sport_area_place_city_eq, options_for_select(Place.all.pluck(:city).uniq), {include_blank: 'エリア'}, class: 'form-select form-control me-2'
+          / TODO: 検索機能をajaxで実装したらSearchボタンは消す
+          = button_tag 'Search', class: 'btn btn-primary'
