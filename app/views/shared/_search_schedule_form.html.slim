@@ -1,6 +1,6 @@
-button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+button.btn.btn-outline-success data-bs-toggle="modal" data-bs-target="#exampleModal"
   = t('defaults.search')
-.modal.fade id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+#exampleModal.modal.fade tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
   .modal-dialog
     .modal-content
       .modal-body
@@ -22,4 +22,4 @@ button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data
           .d-grid.gap-2
             = button_tag t('defaults.search'), class: 'btn btn-outline-success'
       .modal-footer
-        button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+        button.btn-close data-bs-dismiss="modal" aria-label="Close"
