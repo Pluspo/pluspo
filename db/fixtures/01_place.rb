@@ -1999,18 +1999,16 @@ places_params = [
 
 places_params.each do |place_params|
   areas_params = place_params.delete(:areas)
-  Place.seed(place_params)
-  place = Place.last
+  Place.seed(:id, place_params)
 
   areas_params.each do |area_params|
     sports_params = area_params.delete(:sports)
-    place.areas.seed(area_params)
-    area = Area.last
-
+    area_params[:place_id] = place_params[:id]
+    Area.seed(:id, area_params)
     sports_params.each do |sport_params|
       schedules_params = sport_params.delete(:schedules)
       sport = Sport.find_by(name: sport_params[:name]) || Sport.create!(sport_params)
-      area_sport = AreaSport.find_or_create_by!(area_id: area.id, sport_id: sport.id)
+      area_sport = AreaSport.find_or_create_by!(area_id: area_params[:id], sport_id: sport.id)
 
       schedules_params.each do |schedule_params|
         area_sport.batches.find_or_create_by!(schedule_params)
