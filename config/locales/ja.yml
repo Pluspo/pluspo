@@ -5,3 +5,5 @@ ja:
   general:
     time: 時刻
     date: 日付
+  defaults:
+    search: '検索'
