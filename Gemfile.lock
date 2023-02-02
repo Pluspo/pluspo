@@ -126,6 +126,7 @@ GEM
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.0)
+    geocoder (1.8.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
@@ -244,6 +245,8 @@ GEM
     rails-i18n (7.0.5)
       i18n (>= 0.7, < 2)
       railties (>= 6.0.0, < 8)
+    rails_autolink (1.1.7)
+      rails (> 3.1)
     railties (7.0.3.1)
       actionpack (= 7.0.3.1)
       activesupport (= 7.0.3.1)
@@ -375,6 +378,7 @@ DEPENDENCIES
   debug
   draper
   factory_bot_rails
+  geocoder
   html2slim
   importmap-rails
   jbuilder
@@ -385,6 +389,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
   rails-i18n
+  rails_autolink
   ransack
   rspec-rails (= 6.0.0.rc1)
   rubocop

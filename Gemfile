@@ -55,6 +55,8 @@ gem 'ransack'
 gem 'rails-i18n'
 gem 'kaminari'
 gem 'whenever', require: false
+gem 'geocoder'
+gem 'rails_autolink'
 gem "meta-tags"
 
 group :development, :test do
