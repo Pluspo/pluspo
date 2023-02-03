@@ -10,31 +10,27 @@ module ApplicationHelper
 
   def default_meta_tags
     {
-      site: 'サイトネーム',
-      title: 'タイトル',
+      site: 'Pluspo',
+      title: '都内スポーツ施設の横断検索サービス',
       reverse: true,
       charset: 'utf-8',
-      description: 'テキストテキストテキストテキストテキストテキストテキストテキストテキスト',
-      keywords: 'キーワード１,キーワード2,キーワード3',
+      description: 'Pluspoを使えば「スポーツ・日時・場所」の好きな組み合わせで自由にスポーツ施設を検索できます。',
+      keywords: 'スポーツ,スポーツ施設,東京',
       canonical: request.original_url,
-      separator: '|', # これで "タイトル | サイトネーム"ってなる
-      icon: [
-        { href: image_url('favicon.ico') }#,
-        # { href: image_url('top_image.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
-      ],
+      separator: '|',
       og: {
         site_name: :site,
         title: :title,
         description: :description,
         type: 'website',
         url: request.original_url,
-        image: image_url('logo_no_subtitle.png'),
+        image: image_url('ogp.png'),
         local: 'ja-JP'
       },
       twitter: {
         card: 'summary_large_image',
-        site: '@あなたのツイッターアカウント',
-        image: image_url('logo_no_subtitle.png')
+        site: '@', # Twitterアカウントを書くらしい
+        image: image_url('ogp.png')
       }
     }
   end
