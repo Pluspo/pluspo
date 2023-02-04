@@ -1,8 +1,2 @@
-.row
-  .col-6
-    = turbo_frame_tag 'place_table' do
-      = render 'place_table'
-  .col-6
-    .place-show style="background-color: aliceblue;"
-      .row
-        = render @place
+= turbo_frame_tag 'place_table' do
+  = render 'place_table'

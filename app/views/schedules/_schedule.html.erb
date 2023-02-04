@@ -1,0 +1,11 @@
+<tr>
+  <th><%= schedule.decorate.date_and_day_of_week %></th>
+  <td><%= schedule.decorate.full_time %></td>
+  <td><%= schedule.sport.name.truncate(8, omission: '…') %>
+  <td><%= schedule.place.city %></td>
+  <td>
+    <%= link_to places_path(id: schedule.place.id), class: 'link-dark', 'data-bs-toggle': :'collapse', 'data-bs-target': :'#collapseExample', 'aria-expanded': :'false', 'aria-controls': :'collapseExample', data: { turbo_frame: :place } do %>
+      <%= schedule.place.name.truncate(15, omission: '…') %>
+    <% end %>
+  </td>
+</tr>

@@ -1,7 +1,7 @@
 .place_table
   table.table.table-sm.table-hover
     thead
-      tr.text-center
+      tr.text-start
         .mt-4
           th scope="col"  = t('general.date')
           th scope="col"  = t('general.time')
@@ -10,5 +10,8 @@
           th.text-start.ps-4 scope="col"  = Place.human_attribute_name(:name)
     tbody
       = render @schedules
+      #collapseExample.collapse
+        .card.card-body
+          = render @place
   .d-flex.justify-content-center.mt-3
     = paginate @schedules
