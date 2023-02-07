@@ -10,8 +10,5 @@
           th.text-start.ps-4 scope="col"  = Place.human_attribute_name(:name)
     tbody
       = render @schedules
-      #collapseExample.collapse
-        .card.card-body
-          = render @place
   .d-flex.justify-content-center.mt-3
     = paginate @schedules

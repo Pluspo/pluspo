@@ -1,0 +1,7 @@
+tr
+  th = schedule.decorate.date_and_day_of_week
+  td = schedule.decorate.full_time
+  td = schedule.sport.name.truncate(8, omission: '…')
+  td = schedule.place.city
+  td = link_to places_path(id: schedule.place.id), class: 'link-dark', data: { turbo_frame: :place } do
+    = schedule.place.name.truncate(15, omission: '…')
