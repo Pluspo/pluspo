@@ -6,3 +6,11 @@
     .place-show style="background-color: aliceblue;"
       .row
         = render @place
+
+javascript:
+  function ScrollWindow(elem) {
+      const element = document.getElementById(elem);
+      const rect = element.getBoundingClientRect();
+      const elemtop = rect.top + window.pageYOffset;
+      document.documentElement.scrollTop = elemtop;
+  }
