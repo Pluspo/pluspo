@@ -1,8 +1,16 @@
 .row
-  .col-6
+  .col-12
     = turbo_frame_tag 'place_table' do
       = render 'place_table'
-  .col-6
+  .col-12
     .place-show style="background-color: aliceblue;"
       .row
         = render @place
+
+javascript:
+  function ScrollWindow(elem) {
+      const element = document.getElementById(elem);
+      const rect = element.getBoundingClientRect();
+      const elemtop = rect.top + window.pageYOffset;
+      document.documentElement.scrollTop = elemtop;
+  }
