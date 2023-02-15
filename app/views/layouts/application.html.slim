@@ -19,6 +19,7 @@ html
     script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"
     = display_meta_tags(default_meta_tags)
   body style="background-color: #fffff0;"
-    = render 'shared/header'
+    / エラーになるのでとりあえずの処置です
+    = render 'shared/header' unless controller_name == 'static_pages'
     .container
       = yield
