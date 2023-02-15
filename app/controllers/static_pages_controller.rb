@@ -1,16 +1,15 @@
 class StaticPagesController < ApplicationController
-  def top
-  end
+  # TODO: TOPページの追加
+  # def top; end
 
-  def terms
-  end
+  def terms; end
 
-  def privacy_policy
-  end
+  # TODO: プライバシーポリシーページの追加
+  # def privacy_policy; end
 
-  def guide
-  end
+  # TODO: ガイドページの追加
+  # def guide; end
 
-  def faq
-  end
+  # TODO: 問い合わせページの追加
+  # def faq; end
 end
