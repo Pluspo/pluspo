@@ -1,5 +1,7 @@
 nav.navbar.navbar-expand-lg.navbar-light.p-3 style="height: 65px; background-color: #eef2e2;"
   .container-fluid
-    .me-5
+    = link_to root_path do
       = image_tag "logo_no_subtitle.png", { width: '150px' }
-    = render 'shared/search_schedule_form', url: turbo_recede_historical_location_path, q: @q, sports: @sports
+    / TODO: 利用規約ページでエラーになるため応急処置。レイアウト分ける？
+    - if controller_name == :places
+      = render 'shared/search_schedule_form', url: turbo_recede_historical_location_path, q: @q, sports: @sports
