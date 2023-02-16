@@ -1,0 +1,29 @@
+<footer class="text-center mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <div class="p-2 mt-2 center-block">
+            <%= image_tag 'logo_no_subtitle.png', { width: '150px' } %>
+          </div>
+          <div class="p-2 footer_link">
+            <%= link_to '利用規約', terms_path, class: "footer_link ms-1" %>
+          </div>
+        <%
+=begin
+        %>
+          <div class="p-2 footer_link">
+            <%= link_to 'プライバシーポリシー', '#', class: "footer_link ms-1" %>
+          </div>
+          <div class="p-2 footer_link">
+            <% link_to 'お問合せ', '#', class: "footer_link ms-1" %>
+          </div>
+        <%
+=end
+        %>
+          <div class="p-2 footer_explain">
+            <p class="footer_link">Copyright © Pluspo 2023.<br>All rights reserved.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>

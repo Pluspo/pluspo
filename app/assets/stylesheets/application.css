@@ -49,3 +49,15 @@ button.btn-primary:hover {
   background-color: #237291 !important;
   border: solid 1px #237291 !important;
 }
+
+footer {
+  background-color: #eef2e2;
+}
+
+.footer_link {
+  color: #237291
+}
+
+.footer_link:hover{
+  opacity: 0.5 ;
+}
