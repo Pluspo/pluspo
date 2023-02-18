@@ -37,4 +37,7 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 /public/assets
+
+# Magiaで使うやつなので、Magiaデプロイの時はここをコメントアウトすること！
 entrypoint.sh
+Dockerfile-magia
