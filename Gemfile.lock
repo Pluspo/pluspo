@@ -109,6 +109,8 @@ GEM
     debug_inspector (1.1.0)
     diff-lcs (1.5.0)
     digest (3.1.0)
+    dockerfile-rails (1.0.18)
+      rails
     draper (4.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -376,6 +378,7 @@ DEPENDENCIES
   bullet
   capybara
   debug
+  dockerfile-rails (>= 1.0)
   draper
   factory_bot_rails
   geocoder
