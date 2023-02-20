@@ -11,8 +11,7 @@ ja:
           zero: "レコードが見つかりませんでした %{entry_name}"
   views:
     pagination:
-      first: "&laquo; 最初"
-      last: "最後 &raquo;"
-      next: "次 &rsaquo;"
-      previous: "&lsaquo; 前"
-      truncate: "&hellip;"
+      first: "&laquo;"
+      last: "&raquo;"
+      next: "&rsaquo;"
+      previous: "&lsaquo;"
