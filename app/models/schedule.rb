@@ -32,6 +32,7 @@ class Schedule < ApplicationRecord
 
   scope :after_today, -> { where("started_at >= ?", Time.current) }
 
+  # ここら辺は他で使わないからjobで作った方が良さげ？
   class << self
     def insert_schedule_from_batch(batch)
       dates = build_date_from_cycle(batch.cycle)
@@ -40,7 +41,7 @@ class Schedule < ApplicationRecord
       finished_at_arr = batch.finished_at.split(':')
 
       times.each do |time|
-        Schedule.create!(
+        Schedule.find_or_create_by!(
           area_sport_id: batch.area_sport_id,
           started_at: time.change(hour: started_at_arr[0], min: started_at_arr[1]),
           finished_at: time.change(hour: finished_at_arr[0], min: finished_at_arr[1])
