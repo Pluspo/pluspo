@@ -5,7 +5,7 @@ module ApplicationHelper
     html = auto_link(html, option)
     html.gsub(PHONE_NUMBER_REGEXP) do |match|
       phone_to(match)
-    end.html_safe
+    end.html_safe # rubocop:disable Rails/OutputSafety
   end
 
   def default_meta_tags
