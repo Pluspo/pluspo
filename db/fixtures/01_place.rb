@@ -1388,7 +1388,7 @@ places_params = [
             ]
           }
         ]
-      },
+      }
     ]
   },
   {
@@ -1816,7 +1816,7 @@ places_params = [
             ]
           }
         ]
-      },
+      }
     ]
   }
 ]
@@ -1841,6 +1841,4 @@ places_params.each do |place_params|
   end
 end
 
-Place.where(latitude: nil).each do |place|
-  place.save!
-end
+Place.where(latitude: nil).each(&:save!)

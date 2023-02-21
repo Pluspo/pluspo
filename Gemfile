@@ -95,4 +95,4 @@ group :production do
   gem "pg"
 end
 
-gem "dockerfile-rails", ">= 1.0", :group => :development
+gem "dockerfile-rails", ">= 1.0", group: :development

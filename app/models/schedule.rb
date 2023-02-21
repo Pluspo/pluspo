@@ -51,7 +51,7 @@ class Schedule < ApplicationRecord
 
     # 日付を出すだけ
     # in: batch.cycle, out: [Date, Date, ...]
-    def build_date_from_cycle(cycle)
+    def build_date_from_cycle(cycle) # rubocop:disable Metrics/CyclomaticComplexity
       res = []
       week, day_of_week = cycle.to_s.split('_').map(&:to_sym)
 
