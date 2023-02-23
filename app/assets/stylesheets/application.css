@@ -61,3 +61,78 @@ footer {
 .footer_link:hover{
   opacity: 0.5 ;
 }
+
+body.open_popup {
+  overflow: hidden;
+}
+
+.bg_onetime_popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+body.open_popup .bg_onetime_popup {
+  opacity: 1;
+  visibility: visible;
+}
+
+.onetime_popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50%;
+  min-width: 500px;
+  background-color: #fff;
+}
+
+.onetime_popup_title {
+  position: relative;
+  padding: 1em 80px;
+  margin: 0px;
+  background-color: #237291;
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.onetime_popup_title_close {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.onetime_popup_title_close::before,
+.onetime_popup_title_close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+}
+.onetime_popup_title_close::before {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.onetime_popup_title_close::after {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+.onetime_popup_content {
+  padding: 60px 30px;
+  text-align: center;
+}
