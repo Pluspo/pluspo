@@ -7,7 +7,7 @@
           th scope="col"  = t('general.time')
           th scope="col"  = Sport.model_name.human
           th scope="col"  = Place.human_attribute_name(:city)
-          th.text-start.ps-4 scope="col"  = Place.human_attribute_name(:name)
+          th.ps-4 scope="col"  = Place.human_attribute_name(:name)
     tbody
       = render @schedules
   .d-flex.justify-content-center.mt-3

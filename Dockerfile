@@ -1,52 +1,65 @@
-#applicationのディレクトリ名で置き換えてください
-ARG APP_NAME=pluspo
-#使いたいrubyのimage名に置き換えてください
-ARG RUBY_IMAGE=ruby:3.1.2
-#使いたいnodeのversionに置き換えてください(`15.14.0`ではなく`15`とか`16`とかのメジャーバージョン形式で書いてください)
-# ARG NODE_VERSION='16'
-#インストールするbundlerのversionに置き換えてください
+# syntax = docker/dockerfile:1
+
+# Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
+ARG RUBY_VERSION=3.1.2
+FROM ruby:$RUBY_VERSION-slim as base
+
+LABEL fly_launch_runtime="rails"
+
+# Rails app lives here
+WORKDIR /rails
+
+# Set production environment
+ENV RAILS_ENV="production" \
+    BUNDLE_PATH="vendor/bundle" \
+    BUNDLE_WITHOUT="development:test"
+
+# Update gems and preinstall the desired version of bundler
 ARG BUNDLER_VERSION=2.3.7
+RUN gem update --system --no-document && \
+    gem install -N bundler -v ${BUNDLER_VERSION}
 
-FROM $RUBY_IMAGE
-ARG APP_NAME
-ARG RUBY_VERSION
-# ARG NODE_VERSION
-ARG BUNDLER_VERSION
 
-ENV RAILS_ENV production
-ENV BUNDLE_DEPLOYMENT true
-ENV BUNDLE_WITHOUT development:test
-ENV RAILS_SERVE_STATIC_FILES true
-ENV RAILS_LOG_TO_STDOUT true
+# Throw-away build stage to reduce size of final image
+FROM base as build
 
-RUN mkdir /$APP_NAME
-WORKDIR /$APP_NAME
+# Install packages needed to build gems
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y build-essential libpq-dev pkg-config
 
-# 別途インストールが必要なものがある場合は追加してください
-# RUN curl -sL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
-# && wget --quiet -O - /tmp/pubkey.gpg https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-# && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
-# && apt-get update -qq \
-# && apt-get install -y build-essential nodejs yarn
+# Install application gems
+COPY Gemfile Gemfile.lock ./
+RUN bundle _${BUNDLER_VERSION}_ install && \
+    bundle exec bootsnap precompile --gemfile
 
-RUN gem install bundler:$BUNDLER_VERSION
+# Copy application code
+COPY . .
 
-COPY Gemfile /$APP_NAME/Gemfile
-COPY Gemfile.lock /$APP_NAME/Gemfile.lock
+# Precompile bootsnap code for faster boot times
+RUN bundle exec bootsnap precompile app/ lib/
 
-RUN bundle install
+# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
+RUN SECRET_KEY_BASE=DUMMY ./bin/rails assets:precompile
 
-# COPY yarn.lock /$APP_NAME/yarn.lock
-# COPY package.json /$APP_NAME/package.json
 
-COPY . /$APP_NAME/
+# Final stage for app image
+FROM base
 
-RUN SECRET_KEY_BASE="$(bundle exec rake secret)" bin/rails assets:precompile assets:clean
-# RUN yarn install --production --frozen-lockfile
-# RUN yarn cache clean
-# RUN rm -rf /$APP_NAME/node_modules /$APP_NAME/tmp/cache
+# Install packages needed for deployment
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y libsqlite3-0 postgresql-client && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+# Copy built application from previous stage
+COPY --from=build /rails /rails
+
+# Deployment options
+ENV RAILS_LOG_TO_STDOUT="1" \
+    RAILS_SERVE_STATIC_FILES="true"
+
+# Entrypoint prepares the database.
+ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+
+# Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
+CMD ["./bin/rails", "server"]

@@ -2,7 +2,7 @@ class ScheduleDecorator < ApplicationDecorator
   delegate_all
 
   def full_time
-    "#{started_at.strftime('%H:%M')}~#{finished_at.strftime('%H:%M')}"
+    "#{started_at.strftime('%H:%M')}\n~#{finished_at.strftime('%H:%M')}"
   end
 
   def date_and_day_of_week
