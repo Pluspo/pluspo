@@ -11,16 +11,15 @@ javascript:
   window.addEventListener('load', function() {
     if(!sessionStorage.getItem('disp_modal')) {
         sessionStorage.setItem('disp_modal', 'on');
-        const body = document.querySelector('body');
         const closeButton = document.querySelector('.js-close_button');
-        body.classList.add('open_modal');
+        document.body.classList.add('open_modal');
 
         closeButton.addEventListener('click', function() {
             closeModal();
         });
 
         function closeModal() {
-            body.classList.remove('open_modal');
+            document.body.classList.remove('open_modal');
         }
     }
   }, false);
