@@ -1,3 +1,11 @@
+div.js-bg_onetime_popup
+  div.js-onetime_popup
+    div.js-onetime_popup_title
+      span.js-onetime_popup_title_close
+      span 注意〜
+    div.js-onetime_popup_content
+      p 各施設の営業日に関しては責任持てへんよ
+
 javascript:
   window.addEventListener('load', function() {
     if(!sessionStorage.getItem('disp_popup')) {
@@ -23,11 +31,3 @@ javascript:
         }
     }
   }, false);
-
-div.js-bg_onetime_popup
-  div.js-onetime_popup
-    div.js-onetime_popup_title
-      span.js-onetime_popup_title_close
-      span 注意〜
-    div.js-onetime_popup_content
-      p 各施設の営業日に関しては責任持てへんよ
