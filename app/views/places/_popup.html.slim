@@ -1,28 +1,21 @@
 .js-bg_onetime_modal
   .js-onetime_modal
     .js-onetime_modal_title
-      span.js-onetime_modal_title_close
       span 注意〜
     .js-onetime_modal_content
       p 各施設の営業日に関しては責任持てへんよ
+    .js-onetime_modal_footer.text-center
+      button.btn.btn-primary.js-close_button 確認しました！
 
 javascript:
   window.addEventListener('load', function() {
     if(!sessionStorage.getItem('disp_modal')) {
         sessionStorage.setItem('disp_modal', 'on');
         const body = document.querySelector('body');
-        const bgModal = document.querySelector('.js-bg_onetime_modal');
-        const modal = document.querySelector('.js-onetime_modal');
-        const modalTitleClose = document.querySelector('.js-onetime_modal_title_close');
+        const closeButton = document.querySelector('.js-close_button');
         body.classList.add('open_modal');
 
-        bgModal.addEventListener('click', function() {
-            closeModal();
-        });
-        modal.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
-        modalTitleClose.addEventListener('click', function() {
+        closeButton.addEventListener('click', function() {
             closeModal();
         });
 

@@ -61,3 +61,7 @@ footer {
 .footer_link:hover {
   opacity: 0.5;
 }
+
+.js-onetime_modal_footer {
+  margin: 20px;
+}
