@@ -1,33 +1,33 @@
-.js-bg_onetime_popup
-  .js-onetime_popup
-    .js-onetime_popup_title
-      span.js-onetime_popup_title_close
+.js-bg_onetime_modal
+  .js-onetime_modal
+    .js-onetime_modal_title
+      span.js-onetime_modal_title_close
       span 注意〜
-    .js-onetime_popup_content
+    .js-onetime_modal_content
       p 各施設の営業日に関しては責任持てへんよ
 
 javascript:
   window.addEventListener('load', function() {
-    if(!sessionStorage.getItem('disp_popup')) {
-        sessionStorage.setItem('disp_popup', 'on');
+    if(!sessionStorage.getItem('disp_modal')) {
+        sessionStorage.setItem('disp_modal', 'on');
         const body = document.querySelector('body');
-        const bgPopup = document.querySelector('.js-bg_onetime_popup');
-        const popup = document.querySelector('.js-onetime_popup');
-        const popupTitleClose = document.querySelector('.js-onetime_popup_title_close');
-        body.classList.add('open_popup');
+        const bgModal = document.querySelector('.js-bg_onetime_modal');
+        const modal = document.querySelector('.js-onetime_modal');
+        const modalTitleClose = document.querySelector('.js-onetime_modal_title_close');
+        body.classList.add('open_modal');
 
-        bgPopup.addEventListener('click', function() {
-            closePopup();
+        bgModal.addEventListener('click', function() {
+            closeModal();
         });
-        popup.addEventListener('click', function(e) {
+        modal.addEventListener('click', function(e) {
             e.stopPropagation();
         });
-        popupTitleClose.addEventListener('click', function() {
-            closePopup();
+        modalTitleClose.addEventListener('click', function() {
+            closeModal();
         });
 
-        function closePopup() {
-            body.classList.remove('open_popup');
+        function closeModal() {
+            body.classList.remove('open_modal');
         }
     }
   }, false);
