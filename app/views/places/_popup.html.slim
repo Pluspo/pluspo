@@ -1,9 +1,17 @@
 .js-bg_onetime_modal
   .js-onetime_modal
     .js-onetime_modal_title
-      span 注意〜
+      span Pluspo使用上の注意
     .js-onetime_modal_content
-      p 各施設の営業日に関しては責任持てへんよ
+      p 本サービス内のデータは各スポーツ施設のHPを元に構成されていますが、誤りがある可能性があります。予めご了承ください。（より正確な情報は各HPをご参照ください。）
+      p 本サービスの提供するスケジュール通りにスポーツ施設でスポーツを行えるかどうかは保証できません。実際に行えるかどうかは各施設にお問い合わせください。
+      p 本サービスにスポーツ施設の予約機能はございません。予約方法は各施設ごとに異なりますので、詳しくは各施設のHPをご確認ください。
+      p 本サービスの提供するスケジュールは各施設の休館日に対応できておりません。開発中ですのでしばらくお待ちください。
+      br
+      p
+        | 詳しくは
+        = link_to '利用規約', terms_path, target: '_blank'
+        | をご確認ください。
     .js-onetime_modal_footer.text-center
       button.btn.btn-primary.js-close_button 確認しました！
 
