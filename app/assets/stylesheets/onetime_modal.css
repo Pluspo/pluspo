@@ -13,7 +13,6 @@ body.open_modal {
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
-  border-radius: 5px;
 }
 
 body.open_modal .js-bg_onetime_modal {
