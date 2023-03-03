@@ -58,6 +58,10 @@ footer {
   color: #237291
 }
 
-.footer_link:hover{
-  opacity: 0.5 ;
+.footer_link:hover {
+  opacity: 0.5;
+}
+
+.js-onetime_modal_footer {
+  margin: 20px;
 }
