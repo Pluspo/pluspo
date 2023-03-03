@@ -3,4 +3,4 @@ Batch.all.each do |batch|
 end
 
 # レコード数を確認する
-!ApplicationRecord.descendants.map(&:name).map(&:safe_constantize).map { |m| [m, m.count] }.each { |a| printf "%<model>10s%<count>6d\n", *a }
+# !ApplicationRecord.descendants.map(&:name).map(&:safe_constantize).map { |m| [m, m.count] }.each { |a| printf "%<model>10s%<count>6d\n", *a }
