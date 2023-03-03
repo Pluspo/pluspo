@@ -1,35 +1,24 @@
 = turbo_frame_tag :place do
-  .mb-2
-    = image_tag  "/places/#{place.id}.jpg", { class: 'img-thumbnail', width: '100%' }
-  .
-    .row.place-info
-      #list-example.list-group.col-3.ms-4
-        = link_to '施設名称', '#scrollspyHeading1', class: 'list-group-item list-group-item-action'
-        = link_to '所在地', '#scrollspyHeading2', class: 'list-group-item list-group-item-action'
-        = link_to 'スポーツ', '#scrollspyHeading3', class: 'list-group-item list-group-item-action'
-        = link_to '閉館時間', '#scrollspyHeading4', class: 'list-group-item list-group-item-action'
-        = link_to 'その他', '#scrollspyHeading5', class: 'list-group-item list-group-item-action'
-
-      / FIX: 高さ指定をレスポンシブにしたい...BootStrapナニモワカラナイ
-      .scrollspy-example.col-8 data-bs-offset="0" data-bs-spy="scroll" data-bs-target="#list-example" tabindex="0" style="height: 300px; overflow-y: scroll;"
-        h4#scrollspyHeading1 施設名称
-        p = place.name
-        h4#scrollspyHeading2 所在地
-        p
-          = "東京都#{place.city} #{place.address}"
-          = link_to "https://maps.google.com/maps?ll=#{place.latitude},#{place.longitude}&z=17&q=#{place.latitude},#{place.longitude}", target: '_blank' do
-            span.mx-1.p-1
-              = image_tag 'googlemap.png'
-        h4#scrollspyHeading3 スポーツ
-        p.sports-icons
-          / TODO: 施設で利用できるスポーツを動的に表示する
-          - sports = %w[basketball-ball volleyball-ball baseball-bat-ball futbol swimmer table-tennis]
-          - sports.each do |sport|
-            span.border.border-dark.rounded.mx-1.p-1
-              / TODO: font-awesomeの無料枠だとアイコン少ない...代案必要
-              i.fa-lg.fa-solid class="fa-#{sport}"
-        h4#scrollspyHeading4 開館時間
-        p = place.opening_hours
-        h4#scrollspyHeading5 その他
-        = all_auto_link(simple_format(place.message.gsub(/\n/, "\n\n"), wrapper_tag: 'p'), html: {target: '_blank'})
-        // TODO: areaごとのnoteもこの下に表示したい
+  .place-info
+    .scrollspy-example data-bs-offset="0" data-bs-spy="scroll" data-bs-target="#list-example" tabindex="0" style="height: 300px; overflow-y: scroll;"
+      h4#scrollspyHeading1 施設名称
+      p = place.name
+      h4#scrollspyHeading2 所在地
+      p
+        = "東京都#{place.city} #{place.address}"
+        = link_to "https://maps.google.com/maps?ll=#{place.latitude},#{place.longitude}&z=17&q=#{place.latitude},#{place.longitude}", target: '_blank' do
+          span.mx-1.p-1
+            = image_tag 'googlemap.png'
+      h4#scrollspyHeading3 スポーツ
+      p.sports-icons
+        / TODO: 施設で利用できるスポーツを動的に表示する
+        - sports = %w[basketball-ball volleyball-ball baseball-bat-ball futbol swimmer table-tennis]
+        - sports.each do |sport|
+          span.border.border-dark.rounded.mx-1.p-1
+            / TODO: font-awesomeの無料枠だとアイコン少ない...代案必要
+            i.fa-lg.fa-solid class="fa-#{sport}"
+      h4#scrollspyHeading4 開館時間
+      p = place.opening_hours
+      h4#scrollspyHeading5 その他
+      = all_auto_link(simple_format(place.message.gsub(/\n/, "\n\n"), wrapper_tag: 'p'), html: {target: '_blank'})
+      // TODO: areaごとのnoteもこの下に表示したい
