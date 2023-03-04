@@ -10,13 +10,10 @@
           span.mx-1.p-1
             = image_tag 'googlemap.png'
       h4#scrollspyHeading3 スポーツ
-      p.sports-icons
-        / TODO: 施設で利用できるスポーツを動的に表示する
-        - sports = %w[basketball-ball volleyball-ball baseball-bat-ball futbol swimmer table-tennis]
+      .
+        - sports = place.areas.map(&:area_sports).flatten.map(&:sport).pluck(:name).uniq
         - sports.each do |sport|
-          span.border.border-dark.rounded.mx-1.p-1
-            / TODO: font-awesomeの無料枠だとアイコン少ない...代案必要
-            i.fa-lg.fa-solid class="fa-#{sport}"
+          p = sport
       h4#scrollspyHeading4 開館時間
       p = place.opening_hours
       h4#scrollspyHeading5 その他
