@@ -65,3 +65,13 @@ footer {
 .js-onetime_modal_footer {
   margin: 20px;
 }
+
+.place-info>.card-body>h4.card-title {
+  color: #237291;
+  padding: 0.2rem;
+  margin: 50px 0 20px 0;
+  background: linear-gradient(transparent 60%, #f8da5b 60%);
+  font-weight: bold;
+  font-size: 26px;
+  text-indent: 0.2em;
+}
