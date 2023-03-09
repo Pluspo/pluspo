@@ -6,13 +6,9 @@ button.btn.btn-outline-success data-bs-toggle="modal" data-bs-target="#exampleMo
       .modal-body
         = search_form_for q, url: root_path, class: 'flex-column', method: :get do |f|
           = f.collection_select :area_sport_sport_id_eq, Sport.all, :id, :name, {include_blank: 'スポーツ'}, class: 'form-select form-control me-2 mb-4', list: 'datalistOptions', placeholder: 'スポーツ'
-            /datalist#datalistOptions.me-2
-            /  = sports.each do |sport|
-            /    option value="#{sport.name}"
-
           = f.date_field :started_at_gteq, class: "form-control me-2", id: "calendar-1", placeholder: "開始日時"
           span
-            h2.text-center.mb-1. ≀
+            h2.text-center.mb-1 ≀
           = f.date_field :finished_at_lteq_end_of_day, class: "form-control me-2 mb-4", id: "calendar-2", placeholder: "終了日時"
           = f.select :area_sport_area_place_city_eq, options_for_select(Place.all.pluck(:city).uniq), {include_blank: 'エリア'}, class: 'form-select form-control me-2 mb-4'
           .d-grid.gap-2
