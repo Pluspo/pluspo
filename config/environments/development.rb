@@ -10,6 +10,7 @@ Rails.application.configure do
     Bullet.add_footer    = true # 画面左下にメッセージを出します。
   end
 
+  config.hosts.clear #ngrok使うためにhostを許可
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
