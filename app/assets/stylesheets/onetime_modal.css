@@ -4,11 +4,11 @@ body.open_modal {
 
 .js-bg_onetime_modal {
   position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 9999;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
@@ -22,8 +22,10 @@ body.open_modal .js-bg_onetime_modal {
 
 .js-onetime_modal {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
+  overflow: scroll;
+  height: 500px;
   transform: translateX(-50%) translateY(-50%);
   width: 90%;
   max-width: 800px;
