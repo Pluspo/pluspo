@@ -34,8 +34,9 @@ class Schedule < ApplicationRecord
 
   # ここら辺は他で使わないからjobで作った方が良さげ？
   class << self
-    def insert_schedule_from_batch(batch)
-      dates = build_date_from_cycle(batch.cycle)
+    # target_month_num_from_now: 今から何ヶ月後の月をターゲットにするか？ 0=>今月、1=>来月
+    def insert_schedule_from_batch(batch, target_month_num_from_now)
+      dates = build_date_from_cycle(batch.cycle, target_month_num_from_now)
       times = dates&.map(&:to_time)
       started_at_arr = batch.started_at.split(':')
       finished_at_arr = batch.finished_at.split(':')
@@ -51,20 +52,20 @@ class Schedule < ApplicationRecord
 
     # 日付を出すだけ
     # in: batch.cycle, out: [Date, Date, ...]
-    def build_date_from_cycle(cycle) # rubocop:disable Metrics/CyclomaticComplexity
+    def build_date_from_cycle(cycle, target_month_num_from_now) # rubocop:disable Metrics/CyclomaticComplexity
       res = []
       week, day_of_week = cycle.to_s.split('_').map(&:to_sym)
 
       return [] if (week == :unknown) && day_of_week.nil?
 
-      current_month = Date.current.next_month
+      target_month = Date.current.next_month(target_month_num_from_now)
 
       # cycle = :every のときは来月の日付を全て返す
       # FIXME: :everyは施設の営業時間による。現在は、毎月の日数を全て返している。
-      return current_month.all_month.to_a if (week == :every) && day_of_week.nil?
+      return target_month.all_month.to_a if (week == :every) && day_of_week.nil?
 
       # 来月の最初の :day_of_week 曜日
-      first_day_of_week_next_month = current_month.beginning_of_month
+      first_day_of_week_next_month = target_month.beginning_of_month
       first_day_of_week = first_day_of_week_next_month.strftime('%A').downcase.to_sym == day_of_week ? first_day_of_week_next_month : first_day_of_week_next_month.next_occurring(day_of_week)
 
       case week
@@ -73,7 +74,7 @@ class Schedule < ApplicationRecord
         5.times do |i|
           # 来月の日付だったらpop
           res << first_day_of_week.since(i.week)
-          res.pop if res[-1].month != current_month.month
+          res.pop if res[-1].month != target_month.month
         end
       when :first
         res << first_day_of_week.since(0.weeks)
@@ -85,7 +86,7 @@ class Schedule < ApplicationRecord
         res << first_day_of_week.since(3.weeks)
       when :fifth
         fifth_day_of_week = first_day_of_week.since(4.weeks)
-        res << fifth_day_of_week if fifth_day_of_week.month == current_month.month
+        res << fifth_day_of_week if fifth_day_of_week.month == target_month.month
       end
 
       res
