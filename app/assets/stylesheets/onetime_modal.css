@@ -77,4 +77,5 @@ body.open_modal .js-bg_onetime_modal {
   height: 400px;
   overflow-y: auto;
   overscroll-behavior-y: contain;
+  overflow: scroll;
 }
