@@ -74,4 +74,7 @@ body.open_modal .js-bg_onetime_modal {
 .js-onetime_modal_content {
   padding: 30px 10px 0;
   text-align: center;
+  height: 400px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
 }
