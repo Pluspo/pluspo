@@ -75,3 +75,10 @@ body.open_modal .js-bg_onetime_modal {
   padding: 30px 10px 0;
   text-align: center;
 }
+
+.scroll-modal-contents {
+  max-height: 500px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  overflow: scroll;
+}

@@ -2,26 +2,27 @@
   .js-onetime_modal.bg-light
     .js-onetime_modal_title
       span Pluspo使用上の注意
-    .js-onetime_modal_content
-      h5.text-start 本サービス内のデータは各スポーツ施設のHPを元に構成されていますが、誤りがある可能性がありますので予めご了承ください
-      p.text-start.text-muted より正確な情報は各HPをご参照ください
+    .scroll-modal-contents
+      .js-onetime_modal_content
+        h5.text-start 本サービス内のデータは各スポーツ施設のHPを元に構成されていますが、誤りがある可能性がありますので予めご了承ください
+        p.text-start.text-muted より正確な情報は各HPをご参照ください
 
-      h5.text-start 本サービスの提供するスケジュール通りにスポーツを行えるかどうかは保証できません
-      p.text-start.text-muted 実際に行えるかどうかは各施設にお問い合わせください
+        h5.text-start 本サービスの提供するスケジュール通りにスポーツを行えるかどうかは保証できません
+        p.text-start.text-muted 実際に行えるかどうかは各施設にお問い合わせください
 
-      h5.text-start 本サービスにスポーツ施設の予約機能はございません
-      p.text-start.text-muted 予約方法は各施設ごとに異なりますので、詳しくは各施設のHPをご確認ください
+        h5.text-start 本サービスにスポーツ施設の予約機能はございません
+        p.text-start.text-muted 予約方法は各施設ごとに異なりますので、詳しくは各施設のHPをご確認ください
 
-      h5.text-start 本サービスの提供するスケジュールは各施設の休館日に対応できておりません
-      p.text-start.text-muted 開発中ですので対応まで今しばらくお待ちください
+        h5.text-start 本サービスの提供するスケジュールは各施設の休館日に対応できておりません
+        p.text-start.text-muted 開発中ですので対応まで今しばらくお待ちください
 
-      br
-      p
-        | 詳しくは
-        = link_to '利用規約', terms_path, target: '_blank'
-        | をご確認ください。
-    .js-onetime_modal_footer.text-center
-      button.btn.btn-primary.js-close_button 確認しました！
+        br
+        p
+          | 詳しくは
+          = link_to '利用規約', terms_path, target: '_blank'
+          | をご確認ください。
+      .js-onetime_modal_footer.text-center
+        button.btn.btn-primary.js-close_button 確認しました！
 
 javascript:
   window.addEventListener('load', function() {
