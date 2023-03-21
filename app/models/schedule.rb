@@ -44,8 +44,8 @@ class Schedule < ApplicationRecord
       times.each do |time|
         Schedule.find_or_create_by!(
           area_sport_id: batch.area_sport_id,
-          started_at: time.change(hour: started_at_arr[0], min: started_at_arr[1]),
-          finished_at: time.change(hour: finished_at_arr[0], min: finished_at_arr[1])
+          started_at: Time.mktime(time.year, mon = time.mon, day = time.day, hour = started_at_arr[0], min = started_at_arr[1]),
+          finished_at: Time.mktime(time.year, mon = time.mon, day = time.day, hour = finished_at_arr[0], min = finished_at_arr[1])
         )
       end
     end
@@ -73,6 +73,7 @@ class Schedule < ApplicationRecord
         # 5週間作って
         5.times do |i|
           # 来月の日付だったらpop
+          # MEMO: .since で初めて、時刻がセットされる！！
           res << first_day_of_week.since(i.week)
           res.pop if res[-1].month != target_month.month
         end
