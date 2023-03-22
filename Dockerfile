@@ -12,7 +12,8 @@ WORKDIR /rails
 # Set production environment
 ENV RAILS_ENV="production" \
     BUNDLE_PATH="vendor/bundle" \
-    BUNDLE_WITHOUT="development:test"
+    BUNDLE_WITHOUT="development:test" \
+    TZ="Asia/Tokyo"
 
 # Update gems and preinstall the desired version of bundler
 ARG BUNDLER_VERSION=2.3.7
